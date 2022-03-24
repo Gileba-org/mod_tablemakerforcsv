@@ -1,14 +1,14 @@
 ﻿<?php
 /**
 * @Author  Mostafa Shahiri
-*@license	GNU/GPL http://www.gnu.org/copyleft/gpl.html
+* @license	GNU/GPL http://www.gnu.org/copyleft/gpl.html
 **/
 defined('_JEXEC') or die();
 
 // Include the helper class
+use Joomla\CMS\Helper\ModuleHelper;
 
-jimport( 'joomla.application.module.helper' );
-
+// Params
 $fileurl=$params->get('fileurl');
 $separator=$params->get('separator');
 $min_char=$params->get('min_char');
@@ -17,7 +17,7 @@ $table_style=$params->get('table_style');
 $pretext=$params->get('pretext');
 $posttext=$params->get('posttext');
 $textalign=$params->get('table_text_align');
-$tablefont=$params->get('table_font');    
+$tablefont=$params->get('table_font');
 $borderradius=$params->get('table_border_radius');
 $padding=$params->get('table_padding');
 $evenbg=$params->get('even_bg');
@@ -32,14 +32,12 @@ $paglink_color=$params->get('paglink_color');
 $paglink_active=$params->get('paglink_active');
 $paglink_hoverbg=$params->get('paglink_hoverbg');
 $paglink_hovercolor=$params->get('paglink_hovercolor');
-$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx')); 
- if(trim($captions)!="")
- {
- $caption=explode('@#',$captions);
- }
+$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
+if (trim($captions)!="") {
+    $caption=explode('@#',$captions);
+}
 
 // Display the template
-require(JModuleHelper::getLayoutPath('mod_tablemakerforcsv'));
-
+require(ModuleHelper::getLayoutPath('mod_tablemakerforcsv'));
 ?>
