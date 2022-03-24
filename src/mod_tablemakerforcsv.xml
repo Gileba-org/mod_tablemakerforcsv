@@ -17,7 +17,6 @@
 	</updateservers>
 	<files>
     <filename module="mod_tablemakerforcsv">mod_tablemakerforcsv.php</filename>
-    <filename>index.html</filename>
     <folder>tmpl</folder>
     <folder>js</folder>
   </files>
