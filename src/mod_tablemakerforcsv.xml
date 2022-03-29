@@ -19,6 +19,7 @@
     <filename module="mod_tablemakerforcsv">mod_tablemakerforcsv.php</filename>
     <folder>tmpl</folder>
     <folder>js</folder>
+    <folder>language</folder>
   </files>
   <languages folder="language">
     <language tag="en-GB">en-GB/en-GB.mod_tablemakerforcsv.ini</language>
