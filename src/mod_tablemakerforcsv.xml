@@ -20,11 +20,11 @@
     <folder>tmpl</folder>
     <folder>js</folder>
   </files>
-  <languages>
-    <language tag="en-GB">language/en-GB/en-GB.mod_tablemakerforcsv.ini</language>
-    <language tag="fa-IR">language/fa-IR/fa-IR.mod_tablemakerforcsv.ini</language>
-    <language tag="be-NL">language/nl-NL/nl-NL.mod_tablemakerforcsv.ini</language>
-    <language tag="nl-NL">language/nl-NL/nl-NL.mod_tablemakerforcsv.ini</language>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_tablemakerforcsv.ini</language>
+    <language tag="fa-IR">fa-IR/fa-IR.mod_tablemakerforcsv.ini</language>
+    <language tag="be-NL">nl-NL/nl-NL.mod_tablemakerforcsv.ini</language>
+    <language tag="nl-NL">nl-NL/nl-NL.mod_tablemakerforcsv.ini</language>
   </languages>
   <config>
     <fields name="params">
