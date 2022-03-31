@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.0" method="upgrade" client="site" >
+<extension type="module" method="upgrade" client="site" >
   <name>Table Maker for CSV</name>
   <author>Gijs Lamon</author>
   <copyright>(C) 2022 Gileba; (C) 2018 Mostafa Shahiri</copyright>
