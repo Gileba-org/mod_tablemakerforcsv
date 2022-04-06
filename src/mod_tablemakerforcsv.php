@@ -32,10 +32,15 @@ $paglink_color=$params->get('paglink_color');
 $paglink_active=$params->get('paglink_active');
 $paglink_hoverbg=$params->get('paglink_hoverbg');
 $paglink_hovercolor=$params->get('paglink_hovercolor');
-$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+$moduleclass_sfx = "";
+if ($params->get('moduleclass_sfx') != "") {
+    $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+}
 
-if (trim($captions)!="") {
-    $caption=explode('@#',$captions);
+if ($captions != "") {
+    if (trim($captions)!="") {
+        $caption=explode('@#',$captions);
+    }
 }
 
 // Display the template

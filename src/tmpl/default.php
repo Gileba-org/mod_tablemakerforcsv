@@ -57,8 +57,10 @@ $document->addStyleDeclaration($style);
 $document->addScript('modules/mod_tablemakerforcsv/js/jquery.dataTables.min.js');
 
 // The template
-if (trim($pretext)!="") {
-  echo '<div class="pretext">'.$pretext.'</div>';
+if ($pretext != "") {
+  if (trim($pretext)!="") {
+    echo '<div class="pretext">'.$pretext.'</div>';
+  }
 }
 
 if ($fileurl!="") {
@@ -66,13 +68,15 @@ if ($fileurl!="") {
   echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="Search for ..."><br/>';
   echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
 
-  if (trim($captions)!="") {
-    echo '<tr>';
-    for ($i=0; $i<count($caption); $i++)
-    {
-      echo '<td>'.$caption[$i].'</td>';
+  if ($captions != "") {
+    if (trim($captions)!="") {
+      echo '<tr>';
+      for ($i=0; $i<count($caption); $i++)
+      {
+        echo '<td>'.$caption[$i].'</td>';
+      }
+      echo '</tr>';
     }
-    echo '</tr>';
   }
 
   while ($f=fgetcsv($file,1000,$separator)) {
@@ -82,12 +86,15 @@ if ($fileurl!="") {
     }
     echo '</tr>';
   }
+
   echo '</table>';
   echo	'<div id="csvpagination"></div>';
 
   fclose($file);
 }
 
-if (trim($posttext)!="") {
-  echo '<div class="posttext">'.$posttext.'</div>';
+if ($posttext != "") {
+  if (trim($posttext)!="") {
+    echo '<div class="posttext">'.$posttext.'</div>';
+  }
 }
