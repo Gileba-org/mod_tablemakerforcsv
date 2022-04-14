@@ -10,9 +10,9 @@ defined('_JEXEC') or die();
 use Joomla\CMS\Factory;
 
 // Custom JS
-$script="jQuery('document').ready(function(){
-	pagination(".$row_num.");
-});";
+  if ($pagination) {
+    $script="jQuery('document').ready(function(){pagination(".$row_num.");});";
+  }
 
 // Custom CSS
 $style=".csvtable".$moduleclass_sfx."{
@@ -52,7 +52,9 @@ text-align:".$pagalign.";}";
 
 // Load custom code
 $document = Factory::getDocument();
+  if ($pagination) {
 $document->addCustomTag( '<script type="text/javascript">'.$script.'</script>' );
+}
 $document->addStyleDeclaration($style);
 $document->addScript('modules/mod_tablemakerforcsv/js/jquery.dataTables.min.js');
 
@@ -88,7 +90,10 @@ if ($fileurl!="") {
   }
 
   echo '</table>';
-  echo	'<div id="csvpagination"></div>';
+
+  if ($pagination) {
+    echo	'<div id="csvpagination"></div>';
+  }
 
   fclose($file);
 }

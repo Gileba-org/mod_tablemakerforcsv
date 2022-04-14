@@ -8,15 +8,15 @@
   <authorUrl>www.gileba.be</authorUrl>
   <version>3.0.2</version>
   <creationDate>2022-04-06</creationDate>
-	<description>
+  <description>
     This module creates a table from a CSV file. The module reads the content of a CSV file and makes an html table for it. Forked from Mostafa Shahiri (https://github.com/mostafa272/TableMakerforCSV)
   </description>
   <updateservers>
-	 <server type="extension" priority="1" name="Table Maker for CSV">
-		   https://gileba.be/updates/mod_tablemakerforcsv.xml
-	 </server>
-	</updateservers>
-	<files>
+   <server type="extension" priority="1" name="Table Maker for CSV">
+      https://gileba.be/updates/mod_tablemakerforcsv.xml
+   </server>
+  </updateservers>
+  <files>
     <filename module="mod_tablemakerforcsv">mod_tablemakerforcsv.php</filename>
     <folder>tmpl</folder>
     <folder>js</folder>
@@ -51,18 +51,23 @@
       <field name="note12" type="spacer" label="MOD_TABLEMAKEERCSV_EVENODD" />
       <field name="even_bg" default="#dddddd" type="color" label="MOD_TABLEMAKEERCSV_EVENBG_LABEL" description="MOD_TABLEMAKEERCSV_EVENBG_DESC" />
       <field name="odd_bg" default="#FFF" type="color" label="MOD_TABLEMAKEERCSV_ODDBG_LABEL" description="MOD_TABLEMAKEERCSV_ODDBG_DESC" />
-      <field name="note13" type="spacer" label="MOD_TABLEMAKEERCSV_PAGINATION" />
-      <field name="row_num" type="text" default="10" label="MOD_TABLEMAKEERCSV_ROWNUM_LABEL" description="MOD_TABLEMAKEERCSV_ROWNUM_DESC" />
-      <field name="pagalign" type="radio" default="left" label="MOD_TABLEMAKEERCSV_ALIGN_LABEL" description="MOD_TABLEMAKEERCSV_ALIGN_DESC" >
+    </fieldset>
+    <fieldset name="PAGINATION">
+      <field name="pagination" type="radio" default="1" label="MOD_TABLEMAKERCSV_PAGINATION_LABEL" description="MOD_TABLEMAKEERCSV_PAGINATION_DESC" class="btn-group btn-group-yesno">
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+      </field>
+      <field name="row_num" type="text" default="10" label="MOD_TABLEMAKEERCSV_ROWNUM_LABEL" description="MOD_TABLEMAKEERCSV_ROWNUM_DESC" showon="pagination:1" />
+      <field name="pagalign" type="radio" default="left" label="MOD_TABLEMAKEERCSV_ALIGN_LABEL" description="MOD_TABLEMAKEERCSV_ALIGN_DESC" showon="pagination:1" >
         <option value="left">MOD_TABLEMAKEERCSV_LEFT</option>
         <option value="center">MOD_TABLEMAKEERCSV_CENTER</option>
         <option value="right">MOD_TABLEMAKEERCSV_RIGHT</option>
       </field>
-      <field name="paglink_bg" default="#FF0000" type="color" label="MOD_TABLEMAKEERCSV_LINK_LABEL" />
-      <field name="paglink_color" default="#FFF" type="color" label="MOD_TABLEMAKEERCSV_LINKCOLOR_LABEL" />
-      <field name="paglink_active" default="#008000" type="color" label="MOD_TABLEMAKEERCSV_ACTIVE_LABEL" />
-      <field name="paglink_hoverbg" default="#CCC" type="color" label="MOD_TABLEMAKEERCSV_HOVERBG_LABEL" />
-      <field name="paglink_hovercolor" default="#000" type="color" label="MOD_TABLEMAKEERCSV_HOVERCOLOR_LABEL"/>
+      <field name="paglink_bg" default="#FF0000" type="color" label="MOD_TABLEMAKEERCSV_LINK_LABEL" showon="pagination:1" />
+      <field name="paglink_color" default="#FFF" type="color" label="MOD_TABLEMAKEERCSV_LINKCOLOR_LABEL" showon="pagination:1" />
+      <field name="paglink_active" default="#008000" type="color" label="MOD_TABLEMAKEERCSV_ACTIVE_LABEL" showon="pagination:1" />
+      <field name="paglink_hoverbg" default="#CCC" type="color" label="MOD_TABLEMAKEERCSV_HOVERBG_LABEL" showon="pagination:1" />
+      <field name="paglink_hovercolor" default="#000" type="color" label="MOD_TABLEMAKEERCSV_HOVERCOLOR_LABEL" showon="pagination:1" />
     </fieldset>
   </fields>
 </config>

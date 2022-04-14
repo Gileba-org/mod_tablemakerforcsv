@@ -26,6 +26,7 @@ $firstrow_bg=$params->get('firstrow_bg');
 $firstrow_color=$params->get('firstrow_color');
 $firstrow_font=$params->get('firstrow_font');
 $row_num=intval($params->get('row_num'));
+$pagination=$params->get('pagination');
 $pagalign=$params->get('pagalign');
 $paglink_bg=$params->get('paglink_bg');
 $paglink_color=$params->get('paglink_color');
