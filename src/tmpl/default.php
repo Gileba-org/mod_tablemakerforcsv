@@ -8,6 +8,7 @@ defined('_JEXEC') or die();
 
 // Libraries
 use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
 
 // Custom JS
   if ($pagination) {
@@ -60,7 +61,9 @@ $document->addCustomTag( '<script type="text/javascript">'.$script.'</script>' )
   if ($styling) {
 $document->addStyleDeclaration($style);
 }
+  if ($lookup || $pagination) {
 $document->addScript('modules/mod_tablemakerforcsv/js/jquery.dataTables.min.js');
+}
 
 // The template
 if ($pretext != "") {
@@ -71,7 +74,10 @@ if ($pretext != "") {
 
 if ($fileurl!="") {
   $file = fopen('images/'.$fileurl,"r");
-  echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="Search for ..."><br/>';
+  if ($lookup) {
+    echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERFORCSV_SEARCHFOR') . '"><br/>';
+  }
+
   echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
 
   if ($captions != "") {

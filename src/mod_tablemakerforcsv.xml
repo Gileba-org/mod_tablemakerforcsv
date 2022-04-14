@@ -39,6 +39,10 @@
         <field name="caption" type="textarea" rows="10" cols="40"   label="MOD_TABLEMAKEERCSV_CAPTION_LABEL" description="MOD_TABLEMAKEERCSV_CAPTION_DESC" />
         <field name="pretext" type="editor" width="200" height="200" buttons="article,pagebreak,readmore" filter="safehtml" label="MOD_TABLEMAKEERCSV_PRETEXT_LABEL" description="MOD_TABLEMAKEERCSV_PRETEXT_DESC" />
         <field name="posttext" type="editor" width="200" height="200" buttons="article,pagebreak,readmore" filter="safehtml" label="MOD_TABLEMAKEERCSV_POSTTEXT_LABEL" description="MOD_TABLEMAKEERCSV_POSTTEXT_DESC" />
+        <field name="lookup" type="radio" default="0" label="MOD_TABLEMAKERCSV_LOOKUP_LABEL" description="MOD_TABLEMAKEERCSV_LOOKUP_DESC" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
       </fieldset>
       <fieldset name="STYLING">
         <field name="styling" type="radio" default="1" label="MOD_TABLEMAKERCSV_STYLING_LABEL" description="MOD_TABLEMAKEERCSV_STYLING_DESC" class="btn-group btn-group-yesno">
