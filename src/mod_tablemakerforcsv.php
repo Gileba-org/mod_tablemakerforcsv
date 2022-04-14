@@ -16,6 +16,7 @@ $captions=$params->get('caption');
 $table_style=$params->get('table_style');
 $pretext=$params->get('pretext');
 $posttext=$params->get('posttext');
+$styling=$params->get('styling');
 $textalign=$params->get('table_text_align');
 $tablefont=$params->get('table_font');
 $borderradius=$params->get('table_border_radius');
