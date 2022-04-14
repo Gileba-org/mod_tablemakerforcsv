@@ -15,7 +15,8 @@ use Joomla\CMS\Factory;
   }
 
 // Custom CSS
-$style=".csvtable".$moduleclass_sfx."{
+if ($styling) {
+  $style=".csvtable".$moduleclass_sfx."{
     text-align:".$textalign.";
     font:".$tablefont.";
     border-radius:".$borderradius.";
@@ -49,13 +50,16 @@ color:".$paglink_hovercolor.";
 }
 #csvpagination{
 text-align:".$pagalign.";}";
+}
 
 // Load custom code
 $document = Factory::getDocument();
   if ($pagination) {
 $document->addCustomTag( '<script type="text/javascript">'.$script.'</script>' );
 }
+  if ($styling) {
 $document->addStyleDeclaration($style);
+}
 $document->addScript('modules/mod_tablemakerforcsv/js/jquery.dataTables.min.js');
 
 // The template
