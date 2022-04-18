@@ -12,9 +12,9 @@ use Joomla\CMS\Language\Text;
 use Joomla\Filter\InputFilter;
 
 // Custom JS
-  if ($pagination) {
-    $script="jQuery('document').ready(function(){pagination(".$row_num.");});";
-  }
+if ($pagination) {
+  $script="jQuery('document').ready(function(){pagination(".$row_num.");});";
+}
 
 // Custom CSS
 if ($styling) {
@@ -56,24 +56,24 @@ text-align:".$pagalign.";}";
 
 // Load custom code
 $document = Factory::getDocument();
-  if ($pagination) {
-$document->addCustomTag( '<script type="text/javascript">'.$script.'</script>' );
+if ($pagination) {
+  $document->addCustomTag('<script type="text/javascript">'.$script.'</script>');
 }
-  if ($styling) {
-$document->addStyleDeclaration($style);
+if ($styling) {
+  $document->addStyleDeclaration($style);
 }
-  if ($lookup || $pagination) {
-$document->addScript('modules/mod_tablemakerforcsv/js/jquery.dataTables.min.js');
+if ($lookup || $pagination) {
+  $document->addScript('modules/mod_tablemakerforcsv/js/jquery.dataTables.min.js');
 }
 
 // The template
-if ($pretext != "") {
-  if (trim($pretext)!="") {
+if ($pretext !== "") {
+  if (trim($pretext)!=="") {
     echo '<div class="pretext">'.$pretext.'</div>';
   }
 }
 
-if ($fileurl!="") {
+if ($fileurl!=="") {
   $file = fopen('images/'.$fileurl,"r");
   if ($lookup) {
     echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERFORCSV_SEARCHFOR') . '"><br/>';
@@ -81,10 +81,11 @@ if ($fileurl!="") {
 
   echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
 
-  if ($captions != "") {
-    if (trim($captions)!="") {
+  if ($captions !== "") {
+    if (trim($captions)!=="") {
       echo '<tr>';
-      for ($i=0; $i<count($caption); $i++)
+      $end = count($caption);
+      for ($i=0; $i<$end; $i++)
       {
         echo '<td>'.$caption[$i].'</td>';
       }
@@ -94,8 +95,9 @@ if ($fileurl!="") {
 
   while ($f=fgetcsv($file,1000,$separator)) {
     echo '<tr>';
+    $end = count($f);
     $filter = new InputFilter;
-    for ($i=0; $i<count($f); $i++) {
+    for ($i=0; $i<$end; $i++) {
       echo '<td>'.$filter->clean($f[$i], 'string').'</td>';
     }
     echo '</tr>';
@@ -104,14 +106,14 @@ if ($fileurl!="") {
   echo '</table>';
 
   if ($pagination) {
-    echo	'<div id="csvpagination"></div>';
+    echo '<div id="csvpagination"></div>';
   }
 
   fclose($file);
 }
 
-if ($posttext != "") {
-  if (trim($posttext)!="") {
+if ($posttext !== "") {
+  if (trim($posttext)!=="") {
     echo '<div class="posttext">'.$posttext.'</div>';
   }
 }

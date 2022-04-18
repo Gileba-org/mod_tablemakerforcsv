@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
 * @Author  Mostafa Shahiri
 * @license	GNU/GPL http://www.gnu.org/copyleft/gpl.html
@@ -27,7 +27,7 @@ $oddbg=$params->get('odd_bg');
 $firstrow_bg=$params->get('firstrow_bg');
 $firstrow_color=$params->get('firstrow_color');
 $firstrow_font=$params->get('firstrow_font');
-$row_num=intval($params->get('row_num'));
+$row_num=int($params->get('row_num'));
 $pagination=$params->get('pagination');
 $pagalign=$params->get('pagalign');
 $paglink_bg=$params->get('paglink_bg');
@@ -36,16 +36,15 @@ $paglink_active=$params->get('paglink_active');
 $paglink_hoverbg=$params->get('paglink_hoverbg');
 $paglink_hovercolor=$params->get('paglink_hovercolor');
 $moduleclass_sfx = "";
-if ($params->get('moduleclass_sfx') != "") {
+if ($params->get('moduleclass_sfx') !== "") {
     $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 }
 
-if ($captions != "") {
-    if (trim($captions)!="") {
+if ($captions !== "") {
+    if (trim($captions)!=="") {
         $caption=explode('@#',$captions);
     }
 }
 
 // Display the template
-require(ModuleHelper::getLayoutPath('mod_tablemakerforcsv'));
-?>
+require ModuleHelper::getLayoutPath('mod_tablemakerforcsv');
