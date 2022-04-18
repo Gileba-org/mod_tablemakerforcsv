@@ -11,9 +11,9 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 
 // Custom JS
-  if ($pagination) {
-    $script="jQuery('document').ready(function(){pagination(".$row_num.");});";
-  }
+if ($pagination) {
+  $script="jQuery('document').ready(function(){pagination(".$row_num.");});";
+}
 
 // Custom CSS
 if ($styling) {
@@ -55,14 +55,14 @@ text-align:".$pagalign.";}";
 
 // Load custom code
 $document = Factory::getDocument();
-  if ($pagination) {
-$document->addCustomTag( '<script type="text/javascript">'.$script.'</script>' );
+if ($pagination) {
+  $document->addCustomTag('<script type="text/javascript">'.$script.'</script>');
 }
-  if ($styling) {
-$document->addStyleDeclaration($style);
+if ($styling) {
+  $document->addStyleDeclaration($style);
 }
-  if ($lookup || $pagination) {
-$document->addScript('modules/mod_tablemakerforcsv/js/jquery.dataTables.min.js');
+if ($lookup || $pagination) {
+  $document->addScript('modules/mod_tablemakerforcsv/js/jquery.dataTables.min.js');
 }
 
 // The template
