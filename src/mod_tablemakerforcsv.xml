@@ -31,53 +31,53 @@
   <config>
     <fields name="params">
      <fieldset name="basic">
-        <field name="note22" type="note" class="alert alert-info" label="MOD_TABLEMAKEERCSV_NOTE_LABEL" description="MOD_TABLEMAKEERCSV_NOTE_DESC" />
+        <field name="note22" type="note" class="alert alert-info" label="MOD_TABLEMAKERCSV_NOTE_LABEL" description="MOD_TABLEMAKERCSV_NOTE_DESC" />
         <field name="moduleclass_sfx" type="textarea" rows="2" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
-        <field name="fileurl" type="filelist" directory="images" filter="\.csv$"  label="MOD_TABLEMAKEERCSV_FILE_LABEL" description="MOD_TABLEMAKEERCSV_FILE_DESC" />
-        <field name="separator" type="text" default=","  label="MOD_TABLEMAKEERCSV_SEPARATOR_LABEL" description="MOD_TABLEMAKEERCSV_SEPARATOR_DESC" />
-        <field name="min_char" type="text" default="1"  label="MOD_TABLEMAKEERCSV_MINCHAR_LABEL" description="MOD_TABLEMAKEERCSV_MINCHAR_DESC" />
-        <field name="caption" type="textarea" rows="10" cols="40"   label="MOD_TABLEMAKEERCSV_CAPTION_LABEL" description="MOD_TABLEMAKEERCSV_CAPTION_DESC" />
-        <field name="pretext" type="editor" width="200" height="200" buttons="article,pagebreak,readmore" filter="safehtml" label="MOD_TABLEMAKEERCSV_PRETEXT_LABEL" description="MOD_TABLEMAKEERCSV_PRETEXT_DESC" />
-        <field name="posttext" type="editor" width="200" height="200" buttons="article,pagebreak,readmore" filter="safehtml" label="MOD_TABLEMAKEERCSV_POSTTEXT_LABEL" description="MOD_TABLEMAKEERCSV_POSTTEXT_DESC" />
-        <field name="lookup" type="radio" default="0" label="MOD_TABLEMAKERCSV_LOOKUP_LABEL" description="MOD_TABLEMAKEERCSV_LOOKUP_DESC" class="btn-group btn-group-yesno">
+        <field name="fileurl" type="filelist" directory="images" filter="\.csv$"  label="MOD_TABLEMAKERCSV_FILE_LABEL" description="MOD_TABLEMAKERCSV_FILE_DESC" />
+        <field name="separator" type="text" default=","  label="MOD_TABLEMAKERCSV_SEPARATOR_LABEL" description="MOD_TABLEMAKERCSV_SEPARATOR_DESC" />
+        <field name="min_char" type="text" default="1"  label="MOD_TABLEMAKERCSV_MINCHAR_LABEL" description="MOD_TABLEMAKERCSV_MINCHAR_DESC" />
+        <field name="caption" type="textarea" rows="10" cols="40"   label="MOD_TABLEMAKERCSV_CAPTION_LABEL" description="MOD_TABLEMAKERCSV_CAPTION_DESC" />
+        <field name="pretext" type="editor" width="200" height="200" buttons="article,pagebreak,readmore" filter="safehtml" label="MOD_TABLEMAKERCSV_PRETEXT_LABEL" description="MOD_TABLEMAKERCSV_PRETEXT_DESC" />
+        <field name="posttext" type="editor" width="200" height="200" buttons="article,pagebreak,readmore" filter="safehtml" label="MOD_TABLEMAKERCSV_POSTTEXT_LABEL" description="MOD_TABLEMAKERCSV_POSTTEXT_DESC" />
+        <field name="lookup" type="radio" default="0" label="MOD_TABLEMAKERCSV_LOOKUP_LABEL" description="MOD_TABLEMAKERCSV_LOOKUP_DESC" class="btn-group btn-group-yesno">
           <option value="1">JYES</option>
           <option value="0">JNO</option>
         </field>
       </fieldset>
       <fieldset name="STYLING">
-        <field name="styling" type="radio" default="1" label="MOD_TABLEMAKERCSV_STYLING_LABEL" description="MOD_TABLEMAKEERCSV_STYLING_DESC" class="btn-group btn-group-yesno">
+        <field name="styling" type="radio" default="1" label="MOD_TABLEMAKERCSV_STYLING_LABEL" description="MOD_TABLEMAKERCSV_STYLING_DESC" class="btn-group btn-group-yesno">
           <option value="1">JYES</option>
           <option value="0">JNO</option>
         </field>
-        <field name="table_text_align" type="text" default="center" label="MOD_TABLEMAKEERCSV_TEXTALIGN_LABEL" description="MOD_TABLEMAKEERCSV_TEXTALIGN_DESC" showon="styling:1" />
-        <field name="table_font" type="text" default="14px arial" label="MOD_TABLEMAKEERCSV_TABLEFONT_LABEL" description="MOD_TABLEMAKEERCSV_TABLEFONT_DESC" showon="styling:1" />
-        <field name="table_border_radius" default="5px" type="text" label="MOD_TABLEMAKEERCSV_BORDERRADIUS_LABEL" description="MOD_TABLEMAKEERCSV_BORDERRADIUS_DESC" showon="styling:1" />
-        <field name="table_padding" default="8px" type="text" label="MOD_TABLEMAKEERCSV_PADDING_LABEL" description="MOD_TABLEMAKEERCSV_PADDING_DESC" showon="styling:1" />
-        <field name="table_style" default="border-collapse:collapse;width:100%;overflow:hidden;border:solid 1px #CCC;" rows="10" cols="40" type="textarea" label="MOD_TABLEMAKEERCSV_STYLE_LABEL" description="MOD_TABLEMAKEERCSV_STYLE_DESC" showon="styling:1" />
-        <field name="note11" type="spacer" label="MOD_TABLEMAKEERCSV_FIRSTROW" showon="styling:1" />
-        <field name="firstrow_bg" default="#FF0000" type="color" label="MOD_TABLEMAKEERCSV_FIRSTROWBG_LABEL" description="MOD_TABLEMAKEERCSV_FIRSTROWBG_DESC" showon="styling:1" />
-        <field name="firstrow_color" default="#FFF" type="color" label="MOD_TABLEMAKEERCSV_FIRSTROWCOLOR_LABEL" description="MOD_TABLEMAKEERCSV_FIRSTROWCOLOR_DESC" showon="styling:1" />
-        <field name="firstrow_font" default="bold 20px arial" type="text" label="MOD_TABLEMAKEERCSV_FIRSTROWFONT_LABEL" description="MOD_TABLEMAKEERCSV_FIRSTROWFONT_DESC" showon="styling:1" />
-        <field name="note12" type="spacer" label="MOD_TABLEMAKEERCSV_EVENODD" showon="styling:1" />
-        <field name="even_bg" default="#dddddd" type="color" label="MOD_TABLEMAKEERCSV_EVENBG_LABEL" description="MOD_TABLEMAKEERCSV_EVENBG_DESC" showon="styling:1" />
-        <field name="odd_bg" default="#FFF" type="color" label="MOD_TABLEMAKEERCSV_ODDBG_LABEL" description="MOD_TABLEMAKEERCSV_ODDBG_DESC" showon="styling:1" />
+        <field name="table_text_align" type="text" default="center" label="MOD_TABLEMAKERCSV_TEXTALIGN_LABEL" description="MOD_TABLEMAKERCSV_TEXTALIGN_DESC" showon="styling:1" />
+        <field name="table_font" type="text" default="14px arial" label="MOD_TABLEMAKERCSV_TABLEFONT_LABEL" description="MOD_TABLEMAKERCSV_TABLEFONT_DESC" showon="styling:1" />
+        <field name="table_border_radius" default="5px" type="text" label="MOD_TABLEMAKERCSV_BORDERRADIUS_LABEL" description="MOD_TABLEMAKERCSV_BORDERRADIUS_DESC" showon="styling:1" />
+        <field name="table_padding" default="8px" type="text" label="MOD_TABLEMAKERCSV_PADDING_LABEL" description="MOD_TABLEMAKERCSV_PADDING_DESC" showon="styling:1" />
+        <field name="table_style" default="border-collapse:collapse;width:100%;overflow:hidden;border:solid 1px #CCC;" rows="10" cols="40" type="textarea" label="MOD_TABLEMAKERCSV_STYLE_LABEL" description="MOD_TABLEMAKERCSV_STYLE_DESC" showon="styling:1" />
+        <field name="note11" type="spacer" label="MOD_TABLEMAKERCSV_FIRSTROW" showon="styling:1" />
+        <field name="firstrow_bg" default="#FF0000" type="color" label="MOD_TABLEMAKERCSV_FIRSTROWBG_LABEL" description="MOD_TABLEMAKERCSV_FIRSTROWBG_DESC" showon="styling:1" />
+        <field name="firstrow_color" default="#FFF" type="color" label="MOD_TABLEMAKERCSV_FIRSTROWCOLOR_LABEL" description="MOD_TABLEMAKERCSV_FIRSTROWCOLOR_DESC" showon="styling:1" />
+        <field name="firstrow_font" default="bold 20px arial" type="text" label="MOD_TABLEMAKERCSV_FIRSTROWFONT_LABEL" description="MOD_TABLEMAKERCSV_FIRSTROWFONT_DESC" showon="styling:1" />
+        <field name="note12" type="spacer" label="MOD_TABLEMAKERCSV_EVENODD" showon="styling:1" />
+        <field name="even_bg" default="#dddddd" type="color" label="MOD_TABLEMAKERCSV_EVENBG_LABEL" description="MOD_TABLEMAKERCSV_EVENBG_DESC" showon="styling:1" />
+        <field name="odd_bg" default="#FFF" type="color" label="MOD_TABLEMAKERCSV_ODDBG_LABEL" description="MOD_TABLEMAKERCSV_ODDBG_DESC" showon="styling:1" />
       </fieldset>
       <fieldset name="PAGINATION">
-        <field name="pagination" type="radio" default="1" label="MOD_TABLEMAKERCSV_PAGINATION_LABEL" description="MOD_TABLEMAKEERCSV_PAGINATION_DESC" class="btn-group btn-group-yesno">
+        <field name="pagination" type="radio" default="1" label="MOD_TABLEMAKERCSV_PAGINATION_LABEL" description="MOD_TABLEMAKERCSV_PAGINATION_DESC" class="btn-group btn-group-yesno">
           <option value="1">JYES</option>
           <option value="0">JNO</option>
         </field>
-        <field name="row_num" type="text" default="10" label="MOD_TABLEMAKEERCSV_ROWNUM_LABEL" description="MOD_TABLEMAKEERCSV_ROWNUM_DESC" showon="pagination:1" />
-        <field name="pagalign" type="radio" default="left" label="MOD_TABLEMAKEERCSV_ALIGN_LABEL" description="MOD_TABLEMAKEERCSV_ALIGN_DESC" showon="pagination:1" >
-          <option value="left">MOD_TABLEMAKEERCSV_LEFT</option>
-          <option value="center">MOD_TABLEMAKEERCSV_CENTER</option>
-          <option value="right">MOD_TABLEMAKEERCSV_RIGHT</option>
+        <field name="row_num" type="text" default="10" label="MOD_TABLEMAKERCSV_ROWNUM_LABEL" description="MOD_TABLEMAKERCSV_ROWNUM_DESC" showon="pagination:1" />
+        <field name="pagalign" type="radio" default="left" label="MOD_TABLEMAKERCSV_ALIGN_LABEL" description="MOD_TABLEMAKERCSV_ALIGN_DESC" showon="pagination:1" >
+          <option value="left">MOD_TABLEMAKERCSV_LEFT</option>
+          <option value="center">MOD_TABLEMAKERCSV_CENTER</option>
+          <option value="right">MOD_TABLEMAKERCSV_RIGHT</option>
         </field>
-        <field name="paglink_bg" default="#FF0000" type="color" label="MOD_TABLEMAKEERCSV_LINK_LABEL" showon="pagination:1" />
-        <field name="paglink_color" default="#FFF" type="color" label="MOD_TABLEMAKEERCSV_LINKCOLOR_LABEL" showon="pagination:1" />
-        <field name="paglink_active" default="#008000" type="color" label="MOD_TABLEMAKEERCSV_ACTIVE_LABEL" showon="pagination:1" />
-        <field name="paglink_hoverbg" default="#CCC" type="color" label="MOD_TABLEMAKEERCSV_HOVERBG_LABEL" showon="pagination:1" />
-        <field name="paglink_hovercolor" default="#000" type="color" label="MOD_TABLEMAKEERCSV_HOVERCOLOR_LABEL" showon="pagination:1" />
+        <field name="paglink_bg" default="#FF0000" type="color" label="MOD_TABLEMAKERCSV_LINK_LABEL" showon="pagination:1" />
+        <field name="paglink_color" default="#FFF" type="color" label="MOD_TABLEMAKERCSV_LINKCOLOR_LABEL" showon="pagination:1" />
+        <field name="paglink_active" default="#008000" type="color" label="MOD_TABLEMAKERCSV_ACTIVE_LABEL" showon="pagination:1" />
+        <field name="paglink_hoverbg" default="#CCC" type="color" label="MOD_TABLEMAKERCSV_HOVERBG_LABEL" showon="pagination:1" />
+        <field name="paglink_hovercolor" default="#000" type="color" label="MOD_TABLEMAKERCSV_HOVERCOLOR_LABEL" showon="pagination:1" />
       </fieldset>
     </fields>
   </config>
