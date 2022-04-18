@@ -48,4 +48,3 @@ if ($captions !== "") {
 
 // Display the template
 require(ModuleHelper::getLayoutPath('mod_tablemakerforcsv'));
-?>
