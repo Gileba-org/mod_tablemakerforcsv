@@ -9,6 +9,7 @@ defined('_JEXEC') or die();
 // Libraries
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
+use Joomla\Filter\InputFilter;
 
 // Custom JS
   if ($pagination) {
@@ -93,8 +94,9 @@ if ($fileurl!="") {
 
   while ($f=fgetcsv($file,1000,$separator)) {
     echo '<tr>';
+    $filter = new InputFilter;
     for ($i=0; $i<count($f); $i++) {
-      echo '<td>'.$f[$i].'</td>';
+      echo '<td>'.$filter->clean($f[$i], 'string').'</td>';
     }
     echo '</tr>';
   }
