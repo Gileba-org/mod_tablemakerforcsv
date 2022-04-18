@@ -83,7 +83,8 @@ if ($fileurl!=="") {
   if ($captions !== "") {
     if (trim($captions)!=="") {
       echo '<tr>';
-      for ($i=0; $i<count($caption); $i++)
+      $end = count($caption);
+      for ($i=0; $i<$end; $i++)
       {
         echo '<td>'.$caption[$i].'</td>';
       }
@@ -93,7 +94,8 @@ if ($fileurl!=="") {
 
   while ($f=fgetcsv($file,1000,$separator)) {
     echo '<tr>';
-    for ($i=0; $i<count($f); $i++) {
+    $end = count($f);
+    for ($i=0; $i<$end; $i++) {
       echo '<td>'.$f[$i].'</td>';
     }
     echo '</tr>';
