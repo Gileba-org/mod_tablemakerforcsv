@@ -104,7 +104,7 @@ if ($fileurl!=="") {
   echo '</table>';
 
   if ($pagination) {
-    echo	'<div id="csvpagination"></div>';
+    echo '<div id="csvpagination"></div>';
   }
 
   fclose($file);
