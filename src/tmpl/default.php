@@ -68,43 +68,43 @@ if ($lookup || $pagination) {
 // The template
 if ($pretext !== "") {
   if (trim($pretext)!=="") {
-    echo '<div class="pretext">'.$pretext.'</div>';
+    print '<div class="pretext">'.$pretext.'</div>';
   }
 }
 
 if ($fileurl!=="") {
   $file = fopen('images/'.$fileurl,"r");
   if ($lookup) {
-    echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERFORCSV_SEARCHFOR') . '"><br/>';
+    print '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERFORCSV_SEARCHFOR') . '"><br/>';
   }
 
-  echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
+  print '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
 
   if ($captions !== "") {
     if (trim($captions)!=="") {
-      echo '<tr>';
+      print '<tr>';
       $end = count($caption);
       for ($i=0; $i<$end; $i++)
       {
-        echo '<td>'.$caption[$i].'</td>';
+        print '<td>'.$caption[$i].'</td>';
       }
-      echo '</tr>';
+      print '</tr>';
     }
   }
 
   while ($f=fgetcsv($file,1000,$separator)) {
-    echo '<tr>';
+    print '<tr>';
     $end = count($f);
     for ($i=0; $i<$end; $i++) {
-      echo '<td>'.$f[$i].'</td>';
+      print '<td>'.$f[$i].'</td>';
     }
-    echo '</tr>';
+    print '</tr>';
   }
 
-  echo '</table>';
+  print '</table>';
 
   if ($pagination) {
-    echo	'<div id="csvpagination"></div>';
+    print	'<div id="csvpagination"></div>';
   }
 
   fclose($file);
@@ -112,6 +112,6 @@ if ($fileurl!=="") {
 
 if ($posttext !== "") {
   if (trim($posttext)!=="") {
-    echo '<div class="posttext">'.$posttext.'</div>';
+    print '<div class="posttext">'.$posttext.'</div>';
   }
 }
