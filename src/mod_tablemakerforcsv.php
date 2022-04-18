@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
 * @Author  Mostafa Shahiri
 * @license	GNU/GPL http://www.gnu.org/copyleft/gpl.html
@@ -36,12 +36,12 @@ $paglink_active=$params->get('paglink_active');
 $paglink_hoverbg=$params->get('paglink_hoverbg');
 $paglink_hovercolor=$params->get('paglink_hovercolor');
 $moduleclass_sfx = "";
-if ($params->get('moduleclass_sfx') != "") {
+if ($params->get('moduleclass_sfx') !== "") {
     $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 }
 
-if ($captions != "") {
-    if (trim($captions)!="") {
+if ($captions !== "") {
+    if (trim($captions)!=="") {
         $caption=explode('@#',$captions);
     }
 }

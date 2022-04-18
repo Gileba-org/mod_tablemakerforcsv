@@ -66,13 +66,13 @@ $document->addScript('modules/mod_tablemakerforcsv/js/jquery.dataTables.min.js')
 }
 
 // The template
-if ($pretext != "") {
-  if (trim($pretext)!="") {
+if ($pretext !== "") {
+  if (trim($pretext)!=="") {
     echo '<div class="pretext">'.$pretext.'</div>';
   }
 }
 
-if ($fileurl!="") {
+if ($fileurl!=="") {
   $file = fopen('images/'.$fileurl,"r");
   if ($lookup) {
     echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERFORCSV_SEARCHFOR') . '"><br/>';
@@ -80,8 +80,8 @@ if ($fileurl!="") {
 
   echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
 
-  if ($captions != "") {
-    if (trim($captions)!="") {
+  if ($captions !== "") {
+    if (trim($captions)!=="") {
       echo '<tr>';
       for ($i=0; $i<count($caption); $i++)
       {
@@ -108,8 +108,8 @@ if ($fileurl!="") {
   fclose($file);
 }
 
-if ($posttext != "") {
-  if (trim($posttext)!="") {
+if ($posttext !== "") {
+  if (trim($posttext)!=="") {
     echo '<div class="posttext">'.$posttext.'</div>';
   }
 }
