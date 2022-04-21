@@ -76,7 +76,7 @@ if ($pretext !== "") {
 if ($fileurl!=="") {
   $fileName = 'images/'.$fileurl;
 
-  if ( !file_exists($fileName) ) {
+  if (!file_exists($fileName)) {
     $file = fopen($fileName,"r");
     if ($lookup) {
       echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERFORCSV_SEARCHFOR') . '"><br/>';
