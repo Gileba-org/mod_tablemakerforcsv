@@ -74,42 +74,46 @@ if ($pretext !== "") {
 }
 
 if ($fileurl!=="") {
-  $file = fopen('images/'.$fileurl,"r");
-  if ($lookup) {
-    echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERFORCSV_SEARCHFOR') . '"><br/>';
-  }
+  $fileName = 'images/'.$fileurl;
 
-  echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
+  if (!file_exists($fileName)) {
+    $file = fopen($fileName,"r");
+    if ($lookup) {
+      echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERFORCSV_SEARCHFOR') . '"><br/>';
+    }
 
-  if ($captions !== "") {
-    if (trim($captions)!=="") {
+    echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
+
+    if ($captions !== "") {
+      if (trim($captions)!=="") {
+        echo '<tr>';
+        $end = count($caption);
+        for ($i=0; $i<$end; $i++)
+        {
+          echo '<td>'.$caption[$i].'</td>';
+        }
+        echo '</tr>';
+      }
+    }
+
+    while ($f=fgetcsv($file,1000,$separator)) {
       echo '<tr>';
-      $end = count($caption);
-      for ($i=0; $i<$end; $i++)
-      {
-        echo '<td>'.$caption[$i].'</td>';
+      $end = count($f);
+      $filter = new InputFilter;
+      for ($i=0; $i<$end; $i++) {
+        echo '<td>'.$filter->clean($f[$i], 'string').'</td>';
       }
       echo '</tr>';
     }
-  }
 
-  while ($f=fgetcsv($file,1000,$separator)) {
-    echo '<tr>';
-    $end = count($f);
-    $filter = new InputFilter;
-    for ($i=0; $i<$end; $i++) {
-      echo '<td>'.$filter->clean($f[$i], 'string').'</td>';
+    echo '</table>';
+
+    if ($pagination) {
+      echo '<div id="csvpagination"></div>';
     }
-    echo '</tr>';
+
+    fclose($file);
   }
-
-  echo '</table>';
-
-  if ($pagination) {
-    echo '<div id="csvpagination"></div>';
-  }
-
-  fclose($file);
 }
 
 if ($posttext !== "") {
