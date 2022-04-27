@@ -4,29 +4,15 @@
 		<description>A module to create html table from CSV file</description>
 		<element>mod_tablemakerforcsv</element>
 		<type>module</type>
-		<version>3.1.1</version>
+		<version>3.1.2</version>
 		<infourl title="Table Maker for CSV"></infourl>
+		<client>site</client>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/Gileba-org/mod_tablebmakerforcsv/releases/download/3.1.1/mod_tablebmakerforcsv.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/Gileba-org/mod_tablebmakerforcsv/releases/download/3.1.2/mod_tablebmakerforcsv.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
 		</tags>
-		<targetplatform name="joomla" version="3.[23456789]|10" />
-	</update>
-	<update>
-		<name>Table Maker for CSV by Gileba</name>
-		<description>A module to create html table from CSV file</description>
-		<element>mod_tablemakerforcsv</element>
-		<type>module</type>
-		<version>3.1.1</version>
-		<infourl title="Table Maker for CSV"></infourl>
-		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/Gileba-org/mod_tablebmakerforcsv/releases/download/3.1.1/mod_tablebmakerforcsv.zip</downloadurl>
-		</downloads>
-		<tags>
-			<tag>stable</tag>
-		</tags>
-		<targetplatform name="joomla" version="4.[01]" />
+		<targetplatform name="joomla" version="((3\.(23456789|10|11))|(4\.[0123456789]))" />
 	</update>
 </updates>
