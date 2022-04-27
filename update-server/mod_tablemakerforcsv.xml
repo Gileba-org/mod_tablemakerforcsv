@@ -5,7 +5,7 @@
 		<element>mod_tablemakerforcsv</element>
 		<type>module</type>
 		<version>3.1.2</version>
-		<infourl title="Table Maker for CSV"></infourl>
+		<infourl title="Table Maker for CSV">https://github.com/Gileba-org/mod_tablemakerforcsv</infourl>
 		<client>site</client>
 		<downloads>
 			<downloadurl type="full" format="zip">https://github.com/Gileba-org/mod_tablebmakerforcsv/releases/download/3.1.2/mod_tablebmakerforcsv.zip</downloadurl>
