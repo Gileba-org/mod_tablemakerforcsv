@@ -11,7 +11,7 @@ use Joomla\CMS\Helper\ModuleHelper;
 // Params
 $fileurl=$params->get('fileurl');
 $separator=$params->get('separator');
-$min_char=$params->get('min_char');
+$min_char=intval($params->get('min_char'));
 $captions=$params->get('caption');
 $table_style=$params->get('table_style');
 $pretext=$params->get('pretext');
@@ -27,7 +27,7 @@ $oddbg=$params->get('odd_bg');
 $firstrow_bg=$params->get('firstrow_bg');
 $firstrow_color=$params->get('firstrow_color');
 $firstrow_font=$params->get('firstrow_font');
-$row_num=int($params->get('row_num'));
+$row_num=intval($params->get('row_num'));
 $pagination=$params->get('pagination');
 $pagalign=$params->get('pagalign');
 $paglink_bg=$params->get('paglink_bg');
