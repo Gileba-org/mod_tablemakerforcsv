@@ -78,7 +78,7 @@
         <field name="paglink_hoverbg" default="#CCC" type="color" label="MOD_TABLEMAKERCSV_HOVERBG_LABEL" showon="pagination:1" />
         <field name="paglink_hovercolor" default="#000" type="color" label="MOD_TABLEMAKERCSV_HOVERCOLOR_LABEL" showon="pagination:1" />
       </fieldset>
-      <fieldset name="Advanced">
+      <fieldset name="advanced">
         <field name="moduleclass_sfx" type="textarea" rows="2" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" />
       </fieldset>
     </fields>
