@@ -6,8 +6,8 @@
   <license>GNU/GPL</license>
   <authorEmail>info@gileba.be</authorEmail>
   <authorUrl>www.gileba.be</authorUrl>
-  <version>3.1.3</version>
-  <creationDate>2022-04-28</creationDate>
+  <version>3.1.4</version>
+  <creationDate>2022-06-06</creationDate>
   <description>
     This module creates a table from a CSV file. The module reads the content of a CSV file and makes an html table for it. Forked from Mostafa Shahiri (https://github.com/mostafa272/TableMakerforCSV)
   </description>
@@ -33,11 +33,11 @@
      <fieldset name="basic">
         <field name="note22" type="note" class="alert alert-info" label="MOD_TABLEMAKERCSV_NOTE_LABEL" description="MOD_TABLEMAKERCSV_NOTE_DESC" />
         <field name="fileurl" type="filelist" directory="images" filter="\.csv$"  label="MOD_TABLEMAKERCSV_FILE_LABEL" description="MOD_TABLEMAKERCSV_FILE_DESC" />
-        <field name="separator" type="text" default=","  label="MOD_TABLEMAKERCSV_SEPARATOR_LABEL" description="MOD_TABLEMAKERCSV_SEPARATOR_DESC" />
-        <field name="min_char" type="text" default="1"  label="MOD_TABLEMAKERCSV_MINCHAR_LABEL" description="MOD_TABLEMAKERCSV_MINCHAR_DESC" />
-        <field name="caption" type="textarea" rows="10" cols="40"   label="MOD_TABLEMAKERCSV_CAPTION_LABEL" description="MOD_TABLEMAKERCSV_CAPTION_DESC" />
-        <field name="pretext" type="editor" width="200" height="200" buttons="article,pagebreak,readmore" filter="safehtml" label="MOD_TABLEMAKERCSV_PRETEXT_LABEL" description="MOD_TABLEMAKERCSV_PRETEXT_DESC" />
-        <field name="posttext" type="editor" width="200" height="200" buttons="article,pagebreak,readmore" filter="safehtml" label="MOD_TABLEMAKERCSV_POSTTEXT_LABEL" description="MOD_TABLEMAKERCSV_POSTTEXT_DESC" />
+        <field name="separator" type="text" default="," label="MOD_TABLEMAKERCSV_SEPARATOR_LABEL" description="MOD_TABLEMAKERCSV_SEPARATOR_DESC" />
+        <field name="min_char" type="text" default="1" label="MOD_TABLEMAKERCSV_MINCHAR_LABEL" description="MOD_TABLEMAKERCSV_MINCHAR_DESC" />
+        <field name="caption" type="textarea" rows="3" cols="40" label="MOD_TABLEMAKERCSV_CAPTION_LABEL" description="MOD_TABLEMAKERCSV_CAPTION_DESC" />
+        <field name="pretext" type="editor" filter="safehtml" label="MOD_TABLEMAKERCSV_PRETEXT_LABEL" description="MOD_TABLEMAKERCSV_PRETEXT_DESC" />
+        <field name="posttext" type="editor" filter="safehtml" label="MOD_TABLEMAKERCSV_POSTTEXT_LABEL" description="MOD_TABLEMAKERCSV_POSTTEXT_DESC" />
         <field name="lookup" type="radio" default="0" label="MOD_TABLEMAKERCSV_LOOKUP_LABEL" description="MOD_TABLEMAKERCSV_LOOKUP_DESC" class="btn-group btn-group-yesno">
           <option value="1">JYES</option>
           <option value="0">JNO</option>
@@ -78,7 +78,7 @@
         <field name="paglink_hoverbg" default="#CCC" type="color" label="MOD_TABLEMAKERCSV_HOVERBG_LABEL" showon="pagination:1" />
         <field name="paglink_hovercolor" default="#000" type="color" label="MOD_TABLEMAKERCSV_HOVERCOLOR_LABEL" showon="pagination:1" />
       </fieldset>
-      <fieldset name="Advanced">
+      <fieldset name="advanced">
         <field name="moduleclass_sfx" type="textarea" rows="2" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" />
       </fieldset>
     </fields>
