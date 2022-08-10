@@ -11,6 +11,7 @@
   <description>
     This module creates a table from a CSV file. The module reads the content of a CSV file and makes an html table for it. Forked from Mostafa Shahiri (https://github.com/mostafa272/TableMakerforCSV)
   </description>
+  <changelogurl>http://updates.gileba.be/changelogs/mod_tablemakerforcsv.xml</changelogurl>
   <updateservers>
    <server type="extension" priority="1" name="Table Maker for CSV">
       https://gileba.be/updates/mod_tablemakerforcsv.xml
@@ -31,8 +32,7 @@
   <config>
     <fields name="params">
      <fieldset name="basic">
-        <field name="note22" type="note" class="alert alert-info" label="MOD_TABLEMAKERCSV_NOTE_LABEL" description="MOD_TABLEMAKERCSV_NOTE_DESC" />
-        <field name="fileurl" type="filelist" directory="images" filter="\.csv$"  label="MOD_TABLEMAKERCSV_FILE_LABEL" description="MOD_TABLEMAKERCSV_FILE_DESC" />
+        <field name="fileurl" type="media" preview="no" types="documents" label="MOD_TABLEMAKERCSV_FILE_LABEL" description="MOD_TABLEMAKERCSV_FILE_DESC" />
         <field name="separator" type="text" default="," label="MOD_TABLEMAKERCSV_SEPARATOR_LABEL" description="MOD_TABLEMAKERCSV_SEPARATOR_DESC" />
         <field name="min_char" type="text" default="1" label="MOD_TABLEMAKERCSV_MINCHAR_LABEL" description="MOD_TABLEMAKERCSV_MINCHAR_DESC" />
         <field name="caption" type="textarea" rows="3" cols="40" label="MOD_TABLEMAKERCSV_CAPTION_LABEL" description="MOD_TABLEMAKERCSV_CAPTION_DESC" />

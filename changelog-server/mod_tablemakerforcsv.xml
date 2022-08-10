@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+	<changelog>
+		<element>mod_tablemakerforcsv</element>
+		<type>module</type>
+		<version>3.2.0</version>
+		<addition>
+			<item>Allow direct upload and access to CSV-files in the "images" folder</item>
+			<item>J4 Changelog manifest</item>
+		</addition>
+	</changelog>
+	<changelog>
+		<element>mod_tablemakerforcsv</element>
+		<type>module</type>
+		<version>3.1.4</version>
+		<fix>
+			<item>Remove second "Advanced" tab</item>
+			<item>Editor fields no longer have fixed width and height which could sometimes make them hardly accessible</item>
+		</fix>
+		<language>
+			<item>Corrected missing language string in the styling tab</item>
+		</language>
+	</changelog>
+</changelogs>
