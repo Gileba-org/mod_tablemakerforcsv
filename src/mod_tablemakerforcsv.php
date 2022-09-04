@@ -36,7 +36,7 @@ $paglink_active=$params->get('paglink_active');
 $paglink_hoverbg=$params->get('paglink_hoverbg');
 $paglink_hovercolor=$params->get('paglink_hovercolor');
 $moduleclass_sfx = "";
-if ($params->get('moduleclass_sfx') !== "") {
+if (!empty($params->get('moduleclass_sfx'))) {
     $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 }
 
