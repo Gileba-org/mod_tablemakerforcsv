@@ -67,25 +67,23 @@ if ($lookup || $pagination) {
 }
 
 // The template
-if ($pretext !== "") {
-  if (trim($pretext)!=="") {
+if (!empty($pretext)) {
+  if (!empty(trim($pretext))) {
     echo '<div class="pretext">'.$pretext.'</div>';
   }
 }
 
-if ($fileurl!=="") {
-  $fileName = 'images/'.$fileurl;
-
-  if (file_exists($fileName)) {
-    $file = fopen($fileName,"r");
+if (!empty($fileurl)) {
+  if (file_exists($fileurl)) {
+    $file = fopen($fileurl,"r");
     if ($lookup) {
       echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERFORCSV_SEARCHFOR') . '"><br/>';
     }
 
     echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
 
-    if ($captions !== "") {
-      if (trim($captions)!=="") {
+    if (!empty($captions)) {
+      if (!empty(trim($captions))) {
         echo '<tr>';
         $end = count($caption);
         for ($i=0; $i<$end; $i++)
@@ -116,8 +114,8 @@ if ($fileurl!=="") {
   }
 }
 
-if ($posttext !== "") {
-  if (trim($posttext)!=="") {
+if (!empty($posttext)) {
+  if (!empty(trim($posttext))) {
     echo '<div class="posttext">'.$posttext.'</div>';
   }
 }
