@@ -40,7 +40,7 @@ if ($params->get('moduleclass_sfx') !== "") {
     $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 }
 
-if ($captions !== "") {
+if (!empty($captions)) {
     if (trim($captions)!=="") {
         $caption=explode('@#',$captions);
     }
