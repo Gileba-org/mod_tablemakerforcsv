@@ -41,7 +41,7 @@ if ($params->get('moduleclass_sfx') !== "") {
 }
 
 if (!empty($captions)) {
-    if (trim($captions)!=="") {
+    if (!empty(trim($captions))) {
         $caption=explode('@#',$captions);
     }
 }

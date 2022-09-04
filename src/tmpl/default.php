@@ -68,12 +68,12 @@ if ($lookup || $pagination) {
 
 // The template
 if (!empty($pretext)) {
-  if (trim($pretext)!=="") {
+  if (!empty(trim($pretext))) {
     echo '<div class="pretext">'.$pretext.'</div>';
   }
 }
 
-if ($fileurl!=="") {
+if (!empty($fileurl)) {
   $fileName = 'images/'.$fileurl;
 
   if (file_exists($fileName)) {
@@ -85,7 +85,7 @@ if ($fileurl!=="") {
     echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
 
     if (!empty($captions)) {
-      if (trim($captions)!=="") {
+      if (!empty(trim($captions))) {
         echo '<tr>';
         $end = count($caption);
         for ($i=0; $i<$end; $i++)
@@ -117,7 +117,7 @@ if ($fileurl!=="") {
 }
 
 if (!empty($posttext)) {
-  if (trim($posttext)!=="") {
+  if (!empty(trim($posttext))) {
     echo '<div class="posttext">'.$posttext.'</div>';
   }
 }
