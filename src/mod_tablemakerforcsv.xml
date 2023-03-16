@@ -72,11 +72,11 @@
           <option value="center">MOD_TABLEMAKERCSV_CENTER</option>
           <option value="right">MOD_TABLEMAKERCSV_RIGHT</option>
         </field>
-        <field name="paglink_bg" default="#FF0000" type="color" label="MOD_TABLEMAKERCSV_LINK_LABEL" showon="pagination:1" />
-        <field name="paglink_color" default="#FFF" type="color" label="MOD_TABLEMAKERCSV_LINKCOLOR_LABEL" showon="pagination:1" />
-        <field name="paglink_active" default="#008000" type="color" label="MOD_TABLEMAKERCSV_ACTIVE_LABEL" showon="pagination:1" />
-        <field name="paglink_hoverbg" default="#CCC" type="color" label="MOD_TABLEMAKERCSV_HOVERBG_LABEL" showon="pagination:1" />
-        <field name="paglink_hovercolor" default="#000" type="color" label="MOD_TABLEMAKERCSV_HOVERCOLOR_LABEL" showon="pagination:1" />
+        <field name="paglink_bg" default="#FF0000" type="color" label="MOD_TABLEMAKERCSV_LINK_LABEL" description="MOD_TABLEMAKERCSV_LINK_DESC" showon="pagination:1" />
+        <field name="paglink_color" default="#FFF" type="color" label="MOD_TABLEMAKERCSV_LINKCOLOR_LABEL" description="MOD_TABLEMAKERCSV_LINKCOLOR_DESC" showon="pagination:1" />
+        <field name="paglink_active" default="#008000" type="color" label="MOD_TABLEMAKERCSV_ACTIVE_LABEL" description="MOD_TABLEMAKERCSV_ACTIVE_DESC" showon="pagination:1" />
+        <field name="paglink_hoverbg" default="#CCC" type="color" label="MOD_TABLEMAKERCSV_HOVERBG_LABEL" description="MOD_TABLEMAKERCSV_HOVERBG_DESC" showon="pagination:1" />
+        <field name="paglink_hovercolor" default="#000" type="color" label="MOD_TABLEMAKERCSV_HOVERCOLOR_LABEL" description="MOD_TABLEMAKERCSV_HOVERCOLOR_DESC" showon="pagination:1" />
       </fieldset>
       <fieldset name="advanced">
         <field name="moduleclass_sfx" type="textarea" rows="2" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" />
