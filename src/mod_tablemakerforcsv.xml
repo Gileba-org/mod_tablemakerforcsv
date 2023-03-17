@@ -6,8 +6,8 @@
   <license>GNU/GPL</license>
   <authorEmail>info@gileba.be</authorEmail>
   <authorUrl>www.gileba.be</authorUrl>
-  <version>3.2.1</version>
-  <creationDate>2022-09-04</creationDate>
+  <version>3.3.0</version>
+  <creationDate>2023-03-17</creationDate>
   <description>
     This module creates a table from a CSV file. The module reads the content of a CSV file and makes an html table for it. Forked from Mostafa Shahiri (https://github.com/mostafa272/TableMakerforCSV)
   </description>
@@ -26,6 +26,7 @@
   <languages folder="language">
     <language tag="en-GB">en-GB/en-GB.mod_tablemakerforcsv.ini</language>
     <language tag="fa-IR">fa-IR/fa-IR.mod_tablemakerforcsv.ini</language>
+    <language tag="fr-FR">be-NL/be-NL.mod_tablemakerforcsv.ini</language>
     <language tag="be-NL">be-NL/be-NL.mod_tablemakerforcsv.ini</language>
     <language tag="nl-NL">nl-NL/nl-NL.mod_tablemakerforcsv.ini</language>
   </languages>
@@ -72,11 +73,11 @@
           <option value="center">MOD_TABLEMAKERCSV_CENTER</option>
           <option value="right">MOD_TABLEMAKERCSV_RIGHT</option>
         </field>
-        <field name="paglink_bg" default="#FF0000" type="color" label="MOD_TABLEMAKERCSV_LINK_LABEL" showon="pagination:1" />
-        <field name="paglink_color" default="#FFF" type="color" label="MOD_TABLEMAKERCSV_LINKCOLOR_LABEL" showon="pagination:1" />
-        <field name="paglink_active" default="#008000" type="color" label="MOD_TABLEMAKERCSV_ACTIVE_LABEL" showon="pagination:1" />
-        <field name="paglink_hoverbg" default="#CCC" type="color" label="MOD_TABLEMAKERCSV_HOVERBG_LABEL" showon="pagination:1" />
-        <field name="paglink_hovercolor" default="#000" type="color" label="MOD_TABLEMAKERCSV_HOVERCOLOR_LABEL" showon="pagination:1" />
+        <field name="paglink_bg" default="#FF0000" type="color" label="MOD_TABLEMAKERCSV_LINK_LABEL" description="MOD_TABLEMAKERCSV_LINK_DESC" showon="pagination:1" />
+        <field name="paglink_color" default="#FFF" type="color" label="MOD_TABLEMAKERCSV_LINKCOLOR_LABEL" description="MOD_TABLEMAKERCSV_LINKCOLOR_DESC" showon="pagination:1" />
+        <field name="paglink_active" default="#008000" type="color" label="MOD_TABLEMAKERCSV_ACTIVE_LABEL" description="MOD_TABLEMAKERCSV_ACTIVE_DESC" showon="pagination:1" />
+        <field name="paglink_hoverbg" default="#CCC" type="color" label="MOD_TABLEMAKERCSV_HOVERBG_LABEL" description="MOD_TABLEMAKERCSV_HOVERBG_DESC" showon="pagination:1" />
+        <field name="paglink_hovercolor" default="#000" type="color" label="MOD_TABLEMAKERCSV_HOVERCOLOR_LABEL" description="MOD_TABLEMAKERCSV_HOVERCOLOR_DESC" showon="pagination:1" />
       </fieldset>
       <fieldset name="advanced">
         <field name="moduleclass_sfx" type="textarea" rows="2" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" />

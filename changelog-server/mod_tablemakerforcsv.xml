@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelogs>
 	<changelog>
-	<element>mod_tablemakerforcsv</element>
-	<type>module</type>
-	<version>3.2.1</version>
-	<fix>
-		<item>Tables are shown again (we were looking in the wrong file)</item>
-		<item>Solved deprecation messages in PHP 8.1</item>
-	</fix>
-	<change>
-		<item>Code optimisations</item>
-	</change>
-</changelog>
+		<element>mod_tablemakerforcsv</element>
+		<type>module</type>
+		<version>3.3.0</version>
+		<addition>
+			<item>Added descriptions to link paramaters (kudos @AlainRnet)</item>
+		</addition>
+		<language>
+			<item>Added French (fr-FR) language file (kudos @AlainRnet)</item>
+		</language>
+	</changelog>
+	<changelog>
+		<element>mod_tablemakerforcsv</element>
+		<type>module</type>
+		<version>3.2.1</version>
+		<fix>
+			<item>Tables are shown again (we were looking in the wrong file)</item>
+			<item>Solved deprecation messages in PHP 8.1</item>
+		</fix>
+		<change>
+			<item>Code optimisations</item>
+		</change>
+	</changelog>
 	<changelog>
 		<element>mod_tablemakerforcsv</element>
 		<type>module</type>
