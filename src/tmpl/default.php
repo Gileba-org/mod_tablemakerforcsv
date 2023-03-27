@@ -79,7 +79,7 @@ if (!empty($fileurl)) {
   if (file_exists($fileurl)) {
     $file = fopen($fileurl,"r");
     if ($lookup) {
-      echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERCSV_SEARCHFOR') . '"><br /><br />';
+      echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERCSV_SEARCHFOR') . '"><br/>';
     }
 
     echo '<table class="csvtable'.$moduleclass_sfx.' sortable" id="csvtable">';
