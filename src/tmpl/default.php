@@ -102,7 +102,7 @@ if (!empty($fileurl)) {
       $end = count($f);
       $filter = new InputFilter;
       for ($i=0; $i<$end; $i++) {
-        echo ($j==1) ? '<th class="sortable">' : '<td>';
+        echo ($j==1) ? '<th>' : '<td>';
         echo $filter->clean($f[$i], 'string');
         echo ($j==1) ? '</th>' : '</td>';
       }
