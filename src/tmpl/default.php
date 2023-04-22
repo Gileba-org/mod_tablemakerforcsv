@@ -97,7 +97,8 @@ if (!empty($fileurl)) {
     }
 
     while ($f=fgetcsv($file,1000,$separator)) {
-      $j++;echo ($j==1) ? '<thead><tr>' : '<tr>';
+      $j++;
+      echo ($j==1) ? '<thead><tr>' : '<tr>';
       $end = count($f);
       $filter = new InputFilter;
       for ($i=0; $i<$end; $i++) {
