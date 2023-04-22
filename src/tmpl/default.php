@@ -92,7 +92,7 @@ if (!empty($fileurl)) {
         {
           echo '<th>'.$caption[$i].'</th>';
         }
-        echo '</tr></thead>';
+        echo '</tr></thead><tbody>';
       }
     }
 
