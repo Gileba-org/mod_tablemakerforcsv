@@ -43,6 +43,11 @@
           <option value="1">JYES</option>
           <option value="0">JNO</option>
         </field>
+        <field name="allow_html" type="radio" default="0" label="MOD_TABLEMAKERCSV_ALLOW_HTML_LABEL" description="MOD_TABLEMAKERCSV_ALLOW_HTML_DESC" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+       <field name="allowed_tags" type="text" label="MOD_TABLEMAKERCSV_ALLOWED_TAGS_LABEL" description="MOD_TABLEMAKERCSV_ALLOWED_TAGS_DESC" showon="allow_html:1" />
       </fieldset>
       <fieldset name="STYLING">
         <field name="styling" type="radio" default="1" label="MOD_TABLEMAKERCSV_STYLING_LABEL" description="MOD_TABLEMAKERCSV_STYLING_DESC" class="btn-group btn-group-yesno">
