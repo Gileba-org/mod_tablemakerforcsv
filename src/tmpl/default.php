@@ -65,6 +65,7 @@ if ($styling) {
 if ($lookup || $pagination) {
   $document->addScript('modules/mod_tablemakerforcsv/js/jquery.dataTables.min.js');
 }
+  $document->addScript('modules/mod_tablemakerforcsv/js/tablesort.js');
 
 // The template
 if (!empty($pretext)) {
@@ -80,7 +81,7 @@ if (!empty($fileurl)) {
       echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERCSV_SEARCHFOR') . '"><br /><br />';
     }
 
-    echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
+    echo '<table class="csvtable'.$moduleclass_sfx.' sortable" id="csvtable">';
     $j=0;
 
     if (!empty($captions)) {
@@ -90,7 +91,7 @@ if (!empty($fileurl)) {
         $end = count($caption);
         for ($i=0; $i<$end; $i++)
         {
-          echo '<th>'.$caption[$i].'</th>';
+          echo '<th class="sortable">'.$caption[$i].'</th>';
         }
         echo '</tr></thead><tbody>';
       }
@@ -102,7 +103,7 @@ if (!empty($fileurl)) {
       $end = count($f);
       $filter = new InputFilter($tags, array());
       for ($i=0; $i<$end; $i++) {
-        echo ($j==1) ? '<th>' : '<td>';
+        echo ($j==1) ? '<th class="sortable">' : '<td>';
         echo $filter->clean($f[$i], 'string');
         echo ($j==1) ? '</th>' : '</td>';
       }
