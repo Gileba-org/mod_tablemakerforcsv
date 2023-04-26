@@ -17,6 +17,7 @@ $table_style=$params->get('table_style');
 $pretext=$params->get('pretext');
 $posttext=$params->get('posttext');
 $lookup=$params->get('lookup');
+$sortable=$params->get('sortable');
 $styling=$params->get('styling');
 $textalign=$params->get('table_text_align');
 $tablefont=$params->get('table_font');
