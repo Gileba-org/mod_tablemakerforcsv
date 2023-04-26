@@ -46,5 +46,14 @@ if (!empty($captions)) {
     }
 }
 
+$tags = array();
+if ($params->get('allow_html')) {
+    $allowed_tags = $params->get('allowed_tags');
+    if (!empty(trim($allowed_tags))) {
+        $tags=explode(',',$allowed_tags);
+    }
+}
+
+
 // Display the template
 require ModuleHelper::getLayoutPath('mod_tablemakerforcsv');
