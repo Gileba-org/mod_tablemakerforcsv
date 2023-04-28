@@ -1,3 +1,5 @@
+/*eslint no-cond-assign: "error"*/
+
 (function() {
 	fdTableSort = {
 		regExp_Currency: /^[Â£$â‚¬Â¥Â¤]/,
@@ -61,7 +63,7 @@
 			if (!tbl) return;
 			var ths = tbl.getElementsByTagName("th");
 			var a;
-			for (var i = 0, th; ((th = ths[i]) !== null); i++) {
+			for (var i = 0, th; (th = ths[i]) !== null; i++) {
 				a = th.getElementsByTagName("a");
 				if (a.length) a[0].onkeydown = a[0].onclick = null;
 				th.onclick = th.onselectstart = th = a = null
