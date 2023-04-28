@@ -6,7 +6,7 @@
 		<type>module</type>
 		<version>3.4.0</version>
 		<infourl title="Table Maker for CSV">https://github.com/Gileba-org/mod_tablemakerforcsv</infourl>
-  	  	<changelogurl>http://updates.gileba.be/changelogs/mod_tablemakerforcsv.xml</changelogurl>
+  	  	<changelogurl>https://gileba.be/changelogs/mod_tablemakerforcsv.xml</changelogurl>
 		<client>site</client>
 		<downloads>
 			<downloadurl type="full" format="zip">https://github.com/Gileba-org/mod_tablemakerforcsv/releases/download/3.4.0/mod_tablemakerforcsv.zip</downloadurl>

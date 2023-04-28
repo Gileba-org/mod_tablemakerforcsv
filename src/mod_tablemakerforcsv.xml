@@ -11,7 +11,7 @@
   <description>
     This module creates a table from a CSV file. The module reads the content of a CSV file and makes an html table for it. Forked from Mostafa Shahiri (https://github.com/mostafa272/TableMakerforCSV)
   </description>
-  <changelogurl>http://updates.gileba.be/changelogs/mod_tablemakerforcsv.xml</changelogurl>
+  <changelogurl>https://gileba.be/changelogs/mod_tablemakerforcsv.xml</changelogurl>
   <updateservers>
    <server type="extension" priority="1" name="Table Maker for CSV">
       https://gileba.be/updates/mod_tablemakerforcsv.xml
