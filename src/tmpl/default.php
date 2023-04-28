@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
 * @Author  Mostafa Shahiri
 * @license	GNU/GPL http://www.gnu.org/copyleft/gpl.html
@@ -24,10 +24,10 @@ if ($styling) {
     border-radius:".$borderradius.";
     ".$table_style."
 }
-.csvtable".$moduleclass_sfx." td{
+.csvtable".$moduleclass_sfx." th,.csvtable".$moduleclass_sfx." td{
 padding:".$padding.";
 }
-.csvtable".$moduleclass_sfx." tr:first-child  td{
+.csvtable".$moduleclass_sfx." tr th,.csvtable".$moduleclass_sfx." tr th a{
 background:".$firstrow_bg.";
 color:".$firstrow_color.";
 font:".$firstrow_font.";
@@ -77,34 +77,40 @@ if (!empty($fileurl)) {
   if (file_exists($fileurl)) {
     $file = fopen($fileurl,"r");
     if ($lookup) {
-      echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERFORCSV_SEARCHFOR') . '"><br/>';
+      echo '<input type="text" id="csvlookup" onkeyup="lookuptable('.$row_num.','.$min_char.')" placeholder="' . Text::_('MOD_TABLEMAKERCSV_SEARCHFOR') . '"><br /><br />';
     }
 
     echo '<table class="csvtable'.$moduleclass_sfx.'" id="csvtable">';
+    $j=0;
 
     if (!empty($captions)) {
+      $j=2;
       if (!empty(trim($captions))) {
-        echo '<tr>';
+        echo '<thead><tr>';
         $end = count($caption);
         for ($i=0; $i<$end; $i++)
         {
-          echo '<td>'.$caption[$i].'</td>';
+          echo '<th>'.$caption[$i].'</th>';
         }
-        echo '</tr>';
+        echo '</tr></thead><tbody>';
       }
     }
 
     while ($f=fgetcsv($file,1000,$separator)) {
-      echo '<tr>';
+      $j++;
+      echo ($j==1) ? '<thead><tr>' : '<tr>';
       $end = count($f);
-      $filter = new InputFilter;
+      $filter = new InputFilter($tags, array());
       for ($i=0; $i<$end; $i++) {
-        echo '<td>'.$filter->clean($f[$i], 'string').'</td>';
+        echo ($j==1) ? '<th>' : '<td>';
+        echo $filter->clean($f[$i], 'string');
+        echo ($j==1) ? '</th>' : '</td>';
       }
       echo '</tr>';
+      echo ($j==1) ? '</thead><tbody>' : '';
     }
 
-    echo '</table>';
+    echo '</tbody></table>';
 
     if ($pagination) {
       echo '<div id="csvpagination"></div>';
