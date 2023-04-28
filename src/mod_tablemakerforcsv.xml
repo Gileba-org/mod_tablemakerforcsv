@@ -6,8 +6,8 @@
   <license>GNU/GPL</license>
   <authorEmail>info@gileba.be</authorEmail>
   <authorUrl>www.gileba.be</authorUrl>
-  <version>3.3.0</version>
-  <creationDate>2023-03-17</creationDate>
+  <version>3.4.0</version>
+  <creationDate>2023-04-28</creationDate>
   <description>
     This module creates a table from a CSV file. The module reads the content of a CSV file and makes an html table for it. Forked from Mostafa Shahiri (https://github.com/mostafa272/TableMakerforCSV)
   </description>
