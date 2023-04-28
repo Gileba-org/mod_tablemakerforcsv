@@ -6,8 +6,8 @@
   <license>GNU/GPL</license>
   <authorEmail>info@gileba.be</authorEmail>
   <authorUrl>www.gileba.be</authorUrl>
-  <version>3.3.0</version>
-  <creationDate>2023-03-17</creationDate>
+  <version>3.4.0</version>
+  <creationDate>2023-04-28</creationDate>
   <description>
     This module creates a table from a CSV file. The module reads the content of a CSV file and makes an html table for it. Forked from Mostafa Shahiri (https://github.com/mostafa272/TableMakerforCSV)
   </description>
@@ -40,6 +40,10 @@
         <field name="pretext" type="editor" filter="safehtml" label="MOD_TABLEMAKERCSV_PRETEXT_LABEL" description="MOD_TABLEMAKERCSV_PRETEXT_DESC" />
         <field name="posttext" type="editor" filter="safehtml" label="MOD_TABLEMAKERCSV_POSTTEXT_LABEL" description="MOD_TABLEMAKERCSV_POSTTEXT_DESC" />
         <field name="lookup" type="radio" default="0" label="MOD_TABLEMAKERCSV_LOOKUP_LABEL" description="MOD_TABLEMAKERCSV_LOOKUP_DESC" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="sortable" type="radio" default="0" label="MOD_TABLEMAKERCSV_SORTABLE_LABEL" description="MOD_TABLEMAKERCSV_SORTABLE_DESC" class="btn-group btn-group-yesno">
           <option value="1">JYES</option>
           <option value="0">JNO</option>
         </field>

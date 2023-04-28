@@ -3,12 +3,24 @@
 	<changelog>
 		<element>mod_tablemakerforcsv</element>
 		<type>module</type>
+		<version>3.4.0</version>
+		<addition>
+			<item>Added an option to allow HTML in cells</item>
+			<item>Added ability to sort tables (props @AlainRnet)</item>
+		</addition>
+		<fix>
+			<item>CSS for captions wasn't used (props @AlainRnet)</item>
+		</fix>
+	</changelog>
+	<changelog>
+		<element>mod_tablemakerforcsv</element>
+		<type>module</type>
 		<version>3.3.0</version>
 		<addition>
-			<item>Added descriptions to link paramaters (kudos @AlainRnet)</item>
+			<item>Added descriptions to link paramaters (props @AlainRnet)</item>
 		</addition>
 		<language>
-			<item>Added French (fr-FR) language file (kudos @AlainRnet)</item>
+			<item>Added French (fr-FR) language file (props @AlainRnet)</item>
 		</language>
 	</changelog>
 	<changelog>
