@@ -17,7 +17,7 @@
 				obj["e" + type + fn] = fn;
 				obj[type + fn] = function() {
 					obj["e" + type + fn](window.event)
-				};
+				}
 				obj.attachEvent("on" + type, obj[type + fn])
 			} else {
 				obj.addEventListener(type, fn, true)
@@ -39,7 +39,7 @@
 			if (e.stopPropagation) {
 				e.stopPropagation();
 				e.preventDefault()
-			}; /*@cc_on@*/ /*@if(@_win32)e.cancelBubble=true;e.returnValue=false;/*@end@*/
+			} /*@cc_on@*/ /*@if(@_win32)e.cancelBubble=true;e.returnValue=false;/*@end@*/
 			return false
 		},
 		parseClassName: function(head, tbl) {
@@ -49,7 +49,7 @@
 		disableSelection: function(element) {
 			element.onselectstart = function() {
 				return false
-			};
+			}
 			element.unselectable = "on";
 			element.style.MozUserSelect = "none"
 		},
@@ -77,7 +77,7 @@
 					if (a.length) a[0].onkeydown = a[0].onclick = null;
 					th.onclick = th.onselectstart = th = a = null
 				}
-			};
+			}
 			fdTableSort.tmpCache[tableId] = null;
 			delete fdTableSort.tmpCache[tableId]
 		},
@@ -96,25 +96,25 @@
 				if (tbl.id) {
 					fdTableSort.removeTableCache(tbl.id);
 					fdTableSort.removeTmpCache(tbl.id)
-				};
+				}
 				allRowArr = tbl.getElementsByTagName('thead').length ? tbl.getElementsByTagName('thead')[0].getElementsByTagName('tr') : tbl.getElementsByTagName('tr');
 				rowArr = [];
 				sortableTable = false;
 				for (var i = 0, tr; tr = allRowArr[i]; i++) {
 					if (tr.getElementsByTagName('td').length || !tr.getElementsByTagName('th').length) {
 						continue
-					};
+					}
 					rowArr[rowArr.length] = tr.getElementsByTagName('th');
 					for (var j = 0, th; th = rowArr[rowArr.length - 1][j]; j++) {
 						if (th.className.search(/sortable/) != -1) {
 							sortableTable = true
 						}
 					}
-				};
+				}
 				if (!sortableTable) continue;
 				if (!tbl.id) {
 					tbl.id = "fd-table-" + fdTableSort.uniqueHash++
-				};
+				}
 				showArrow = tbl.className.search("no-arrow") == -1;
 				showOnly = tbl.className.search("sortable-onload-show") != -1;
 				columnNumSortObj = {};
@@ -123,17 +123,17 @@
 					columnNumSortObj[parseInt(colMatch[match], 10)] = {
 						"reverse": colMatch[match].search("r") != -1
 					}
-				};
+				}
 				rowLength = rowArr[0].length;
 				for (c = 0; c < rowArr[0].length; c++) {
 					if (rowArr[0][c].getAttribute(fdTableSort.colspan) && rowArr[0][c].getAttribute(fdTableSort.colspan) > 1) {
 						rowLength = rowLength + (rowArr[0][c].getAttribute(fdTableSort.colspan) - 1)
 					}
-				};
+				}
 				workArr = new Array(rowArr.length);
 				for (c = rowArr.length; c--;) {
 					workArr[c] = new Array(rowLength)
-				};
+				}
 				for (c = 0; c < workArr.length; c++) {
 					celCount = 0;
 					for (i = 0; i < rowLength; i++) {
@@ -147,11 +147,11 @@
 									((n < rowspan) && ((c + n) < workArr.length)); n++) {
 									workArr[(c + n)][(i + t)] = cel
 								}
-							};
+							}
 							if (++celCount == rowArr[c].length) break
 						}
 					}
-				};
+				}
 				for (c = 0; c < workArr.length; c++) {
 					for (i = 0; i < workArr[c].length; i++) {
 						if (workArr[c][i].className.search("fd-column-") == -1 && workArr[c][i].className.search("sortable") != -1) workArr[c][i].className = workArr[c][i].className + " fd-column-" + i;
@@ -160,17 +160,17 @@
 							if (i in columnNumSortObj) {
 								columnNumSortObj[i]["thNode"] = workArr[c][i];
 								columnNumSortObj["active"] = true
-							};
+							}
 							thtext = fdTableSort.getInnerText(workArr[c][i]);
 							for (var cn = workArr[c][i].childNodes.length; cn--;) {
 								if (workArr[c][i].childNodes[cn].nodeType == 1 && (workArr[c][i].childNodes[cn].className == "fdFilterTrigger" || /img/i.test(workArr[c][i].childNodes[cn].nodeName))) {
 									continue
-								};
+								}
 								if (workArr[c][i].childNodes[cn].nodeType == 1 && /^a$/i.test(workArr[c][i].childNodes[cn].nodeName)) {
 									workArr[c][i].childNodes[cn].onclick = workArr[c][i].childNodes[cn].onkeydown = null
-								};
+								}
 								workArr[c][i].removeChild(workArr[c][i].childNodes[cn])
-							};
+							}
 							aclone = a.cloneNode(true);
 							aclone.appendChild(document.createTextNode(thtext));
 							aclone.title = "Sort on \u201c" + thtext + "\u201d";
@@ -182,11 +182,11 @@
 							aclone = null
 						}
 					}
-				};
+				}
 				fdTableSort.tmpCache[tbl.id] = {
 					cols: rowLength,
 					headers: workArr
-				};
+				}
 				workArr = null;
 				multi = 0;
 				if ("active" in columnNumSortObj) {
@@ -197,7 +197,7 @@
 						obj = columnNumSortObj[col];
 						if (!("thNode" in obj)) {
 							continue
-						};
+						}
 						fdTableSort.multi = true;
 						len = obj.reverse ? 2 : 1;
 						for (ii = 0; ii < len; ii++) {
@@ -207,7 +207,7 @@
 							} else {
 								fdTableSort.addThNode()
 							}
-						};
+						}
 						if (showOnly) {
 							fdTableSort.removeClass(obj.thNode, "(forwardSort|reverseSort)");
 							fdTableSort.addClass(obj.thNode, obj.reverse ? "reverseSort" : "forwardSort");
@@ -215,11 +215,11 @@
 								span = fdTableSort.thNode.getElementsByTagName('span')[0];
 								if (span.firstChild) {
 									span.removeChild(span.firstChild)
-								};
+								}
 								span.appendChild(document.createTextNode(len == 1 ? " \u2193" : " \u2191"))
 							}
 						}
-					};
+					}
 					if (showOnly && (fdTableSort.tableCache[tbl.id].colStyle || fdTableSort.tableCache[tbl.id].rowStyle)) {
 						fdTableSort.redraw(tbl.id, false)
 					}
@@ -230,7 +230,7 @@
 						fdTableSort.redraw(tbl.id, false)
 					}
 				}
-			};
+			}
 			fdTableSort.thNode = aclone = a = span = columnNumSortObj = thNode = tbl = allRowArr = rowArr = null
 		},
 		initWrapper: function(e) {
@@ -240,29 +240,29 @@
 				var targ = this;
 				while (targ.tagName.toLowerCase() != "th") {
 					targ = targ.parentNode
-				};
+				}
 				fdTableSort.thNode = targ;
 				while (targ.tagName.toLowerCase() != "table") {
 					targ = targ.parentNode
-				};
+				}
 				fdTableSort.tableId = targ.id;
 				fdTableSort.multi = e.shiftKey;
 				fdTableSort.addSortActiveClass();
 				setTimeout(fdTableSort.initSort, 5, false);
 				return fdTableSort.stopEvent(e)
-			};
+			}
 			return kc != -1 ? true : fdTableSort.stopEvent(e)
 		},
 		jsWrapper: function(tableid, colNums) {
 			if (!(tableid in fdTableSort.tmpCache)) {
 				return false
-			};
+			}
 			if (!(tableid in fdTableSort.tableCache)) {
 				fdTableSort.prepareTableData(document.getElementById(tableid))
-			};
+			}
 			if (!(colNums instanceof Array)) {
 				colNums = [colNums]
-			};
+			}
 			fdTableSort.tableId = tableid;
 			var len = colNums.length,
 				colNum;
@@ -276,13 +276,13 @@
 						identical = false;
 						break
 					}
-				};
+				}
 				if (identical) {
 					fdTableSort.thNode = th;
 					fdTableSort.initSort(true);
 					return
 				}
-			};
+			}
 			fdTableSort.addSortActiveClass();
 			for (var i = 0; i < len; i++) {
 				fdTableSort.multi = i;
@@ -294,7 +294,7 @@
 		addSortActiveClass: function() {
 			if (fdTableSort.thNode == null) {
 				return
-			};
+			}
 			fdTableSort.addClass(fdTableSort.thNode, fdTableSort.sortActiveClass);
 			fdTableSort.addClass(document.getElementsByTagName('body')[0], fdTableSort.sortActiveClass)
 		},
@@ -306,13 +306,13 @@
 		doCallback: function(init) {
 			if (!fdTableSort.tableId || !(fdTableSort.tableId in fdTableSort.tableCache)) {
 				return
-			};
+			}
 			fdTableSort.callback(fdTableSort.tableId, init ? fdTableSort.tableCache[fdTableSort.tableId].initiatedCallback : fdTableSort.tableCache[fdTableSort.tableId].completeCallback)
 		},
 		addClass: function(e, c) {
 			if (new RegExp("(^|\\s)" + c + "(\\s|$)").test(e.className)) {
 				return
-			};
+			}
 			e.className += (e.className ? " " : "") + c
 		},
 		/*@cc_on/*@if(@_win32)removeClass:function(e,c){e.className=!c?"":e.className.replace(new RegExp("(^|\\s)"+c+"(\\s|$)")," ").replace(/^\s*((?:[\S\s]*\S)?)\s*$/,'$1')},@else@*/ removeClass: function(e, c) {
@@ -335,10 +335,10 @@
 				func = window[cb + tblId]
 			} else if (cb in window) {
 				func = window[cb]
-			};
+			}
 			if (typeof func == "function") {
 				func(tblId, fdTableSort.tableCache[tblId].thList)
-			};
+			}
 			func = null
 		},
 		prepareTableData: function(table) {
@@ -360,7 +360,7 @@
 			for (var tmp = 0, th; th = ths[tmp]; tmp++) {
 				if (th.className.search(re) == -1) continue;
 				sortableColumnNumbers[sortableColumnNumbers.length] = th
-			};
+			}
 			for (row = 0; row < numberOfRows; row++) {
 				tr = trs[row];
 				if (tr.parentNode != start || tr.getElementsByTagName("th").length || (tr.parentNode && tr.parentNode.tagName.toLowerCase().search(/thead|tfoot/) != -1)) continue;
@@ -397,16 +397,16 @@
 							fdTableSort.addClass(th, "sortable-text");
 							txt = txt.toLowerCase()
 						}
-					};
+					}
 					if (rowCnt > 0 && identical[col] && identVal[col] != txt) {
 						identical[col] = false
-					};
+					}
 					identVal[col] = txt;
 					data[rowCnt][col] = txt
-				};
+				}
 				data[rowCnt][numberOfCols] = tr;
 				rowCnt++
-			};
+			}
 			var colStyle = table.className.search(/colstyle-([\S]+)/) != -1 ? table.className.match(/colstyle-([\S]+)/)[1] : false;
 			var rowStyle = table.className.search(/rowstyle-([\S]+)/) != -1 ? table.className.match(/rowstyle-([\S]+)/)[1] : false;
 			var iCBack = table.className.search(/sortinitiatedcallback-([\S-]+)/) == -1 ? "sortInitiatedCallback" : table.className.match(/sortinitiatedcallback-([\S]+)/)[1];
@@ -424,16 +424,16 @@
 				colStyle: colStyle,
 				rowStyle: rowStyle,
 				noArrow: table.className.search(/no-arrow/) != -1
-			};
+			}
 			sortableColumnNumbers = data = tr = td = th = trs = identical = identVal = null
 		},
 		onUnload: function() {
 			for (tbl in fdTableSort.tableCache) {
 				fdTableSort.removeTableCache(tbl)
-			};
+			}
 			for (tbl in fdTableSort.tmpCache) {
 				fdTableSort.removeTmpCache(tbl)
-			};
+			}
 			fdTableSort.removeEvent(window, "load", fdTableSort.initEvt);
 			fdTableSort.removeEvent(window, "unload", fdTableSort.onUnload);
 			fdTableSort.tmpCache = fdTableSort.tableCache = null
@@ -448,10 +448,10 @@
 					for (var i = 0; i < len; i++) {
 						dataObj.colOrder[dataObj.thList[i].className.match(/fd-column-([0-9]+)/)[1]] = false
 					}
-				};
+				}
 				if (dataObj.thList.length && dataObj.thList[0] == fdTableSort.thNode) alt = true;
 				dataObj.thList = []
-			};
+			}
 			var found = false;
 			var l = dataObj.thList.length;
 			for (var i = 0, n; n = dataObj.thList[i]; i++) {
@@ -459,13 +459,13 @@
 					found = true;
 					break
 				}
-			};
+			}
 			if (!found) {
 				dataObj.thList.push(fdTableSort.thNode);
 				if (dataObj.colStyle) {
 					dataObj.colOrder[pos] = true
 				}
-			};
+			}
 			var ths = document.getElementById(fdTableSort.tableId).getElementsByTagName("th");
 			for (var i = 0, th; th = ths[i]; i++) {
 				found = false;
@@ -474,7 +474,7 @@
 						found = true;
 						break
 					}
-				};
+				}
 				if (!found) {
 					fdTableSort.removeClass(th, "(forwardSort|reverseSort)");
 					if (!dataObj.noArrow) {
@@ -485,7 +485,7 @@
 						}
 					}
 				}
-			};
+			}
 			if (dataObj.thList.length > 1) {
 				classToAdd = fdTableSort.thNode.className.search(/forwardSort/) != -1 ? "reverseSort" : "forwardSort";
 				fdTableSort.removeClass(fdTableSort.thNode, "(forwardSort|reverseSort)");
@@ -500,11 +500,11 @@
 			var tableElem = document.getElementById(fdTableSort.tableId);
 			if (!(fdTableSort.tableId in fdTableSort.tableCache)) {
 				fdTableSort.prepareTableData(document.getElementById(fdTableSort.tableId))
-			};
+			}
 			fdTableSort.addThNode();
 			if (!noCallback) {
 				fdTableSort.doCallback(true)
-			};
+			}
 			fdTableSort.pos = thNode.className.match(/fd-column-([0-9]+)/)[1];
 			var dataObj = fdTableSort.tableCache[tableElem.id];
 			var lastPos = dataObj.pos && dataObj.pos.className ? dataObj.pos.className.match(/fd-column-([0-9]+)/)[1] : -1;
@@ -522,7 +522,7 @@
 					p = th.className.match(/fd-column-([0-9]+)/)[1];
 					if (dataObj.identical[p]) {
 						continue
-					};
+					}
 					cnt++;
 					if (th.className.match(/sortable-(numeric|currency|date|keep)/)) {
 						f = "fdTableSort.sortNumeric"
@@ -537,11 +537,11 @@
 					js += "var " + e + " = " + f + "(" + d + ");\n";
 					js += "if(" + e + ") return " + e + ";\n";
 					js += "else { \n"
-				};
+				}
 				js += "return 0;\n";
 				for (var i = 0; i < cnt; i++) {
 					js += "};\n"
-				};
+				}
 				if (cnt) js += "return 0;\n";
 				js += "};\n";
 				eval(js);
@@ -561,48 +561,48 @@
 						dataObj.data.sort(fdTableSort.sortText)
 					} else if (thNode.className.search(/sortable-([a-zA-Z\_]+)/) != -1 && thNode.className.match(/sortable-([a-zA-Z\_]+)/)[1] in window) {
 						dataObj.data.sort(window[thNode.className.match(/sortable-([a-zA-Z\_]+)/)[1]])
-					};
+					}
 					if (thNode.className.search(/(^|\s)favour-reverse($|\s)/) != -1) {
 						classToAdd = classToAdd == "forwardSort" ? "reverseSort" : "forwardSort";
 						dataObj.data.reverse()
 					}
 				}
-			};
+			}
 			if (ident) {
 				identical = false
-			};
+			}
 			if (dataObj.thList.length == 1) {
 				fdTableSort.removeClass(thNode, "(forwardSort|reverseSort)");
 				fdTableSort.addClass(thNode, classToAdd)
-			};
+			}
 			if (!dataObj.noArrow) {
 				var span = fdTableSort.thNode.getElementsByTagName('span')[0];
 				if (span.firstChild) span.removeChild(span.firstChild);
 				span.appendChild(document.createTextNode(fdTableSort.thNode.className.search(/forwardSort/) != -1 ? " \u2193" : " \u2191"))
-			};
+			}
 			if (!dataObj.rowStyle && !dataObj.colStyle && identical) {
 				fdTableSort.removeSortActiveClass();
 				if (!noCallback) {
 					fdTableSort.doCallback(false)
-				};
+				}
 				fdTableSort.thNode = null;
 				return
-			};
+			}
 			if ("tablePaginater" in window && "tableInfo" in tablePaginater && fdTableSort.tableId in tablePaginater.tableInfo) {
 				tablePaginater.redraw(fdTableSort.tableId, identical)
 			} else {
 				fdTableSort.redraw(fdTableSort.tableId, identical)
-			};
+			}
 			fdTableSort.removeSortActiveClass();
 			if (!noCallback) {
 				fdTableSort.doCallback(false)
-			};
+			}
 			fdTableSort.thNode = null
 		},
 		redraw: function(tableid, identical) {
 			if (!tableid || !(tableid in fdTableSort.tableCache)) {
 				return
-			};
+			}
 			var dataObj = fdTableSort.tableCache[tableid];
 			var data = dataObj.data;
 			var len1 = data.length;
@@ -622,15 +622,15 @@
 						if (!colOrder[thPos]) fdTableSort.removeClass(tds[thPos], colStyle);
 						else fdTableSort.addClass(tds[thPos], colStyle)
 					}
-				};
+				}
 				if (!identical) {
 					if (rowStyle && tr.className.search(reg) == -1) {
 						if (highLight++ & 1) fdTableSort.addClass(tr, rowStyle);
 						else fdTableSort.removeClass(tr, rowStyle)
-					};
+					}
 					hook.appendChild(tr)
 				}
-			};
+			}
 			tr = tds = hook = null
 		},
 		getInnerText: function(el) {
@@ -641,7 +641,7 @@
 			for (i = el.firstChild; i; i = i.nextSibling) {
 				if (i.nodeType == 3) txt += i.nodeValue;
 				else if (i.nodeType == 1) txt += fdTableSort.getInnerText(i)
-			};
+			}
 			return txt
 		},
 		dateFormat: function(dateIn, favourDMY) {
@@ -674,9 +674,9 @@
 					if (d.length == 1) d = "0" + String(d);
 					if (y.length != 4) y = (parseInt(y) < 50) ? "20" + String(y) : "19" + String(y);
 					return y + String(m) + d
-				};
+				}
 				cnt++
-			};
+			}
 			return 0
 		},
 		sortNumeric: function(a, b) {
