@@ -61,8 +61,7 @@
 			if (!tbl) return;
 			var ths = tbl.getElementsByTagName("th");
 			var a;
-			for (var i = 0; ths[i]; i++) {
-				th = ths[i];
+			for (var i = 0, th; (th = ths[i]); i++) {
 				a = th.getElementsByTagName("a");
 				if (a.length) a[0].onkeydown = a[0].onclick = null;
 				th.onclick = th.onselectstart = th = a = null
