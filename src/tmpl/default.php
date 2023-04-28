@@ -68,7 +68,7 @@ if ($lookup || $pagination) {
 $sort = '';
 if ($sortable) {
   $document->addScript('modules/mod_tablemakerforcsv/js/tablesort.js');
-  $sort =  ' class="sortable';
+  $sort =  ' class="sortable"';
 }
 
 // The template
