@@ -86,7 +86,7 @@ if (!empty($fileurl)) {
     }
 
     echo '<table class="csvtable' . $moduleclass_sfx;
-    echo ($sortable) ? ' sortable';
+    echo ($sortable) ? ' sortable' : '';
     echo '" id="csvtable">';
 
     $j=0;
