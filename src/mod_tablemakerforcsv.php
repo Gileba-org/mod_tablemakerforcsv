@@ -17,6 +17,7 @@ $table_style=$params->get('table_style');
 $pretext=$params->get('pretext');
 $posttext=$params->get('posttext');
 $lookup=$params->get('lookup');
+$sortable=$params->get('sortable');
 $styling=$params->get('styling');
 $textalign=$params->get('table_text_align');
 $tablefont=$params->get('table_font');
@@ -45,6 +46,15 @@ if (!empty($captions)) {
         $caption=explode('@#',$captions);
     }
 }
+
+$tags = array();
+if ($params->get('allow_html')) {
+    $allowed_tags = $params->get('allowed_tags');
+    if (!empty(trim($allowed_tags))) {
+        $tags=explode(',',$allowed_tags);
+    }
+}
+
 
 // Display the template
 require ModuleHelper::getLayoutPath('mod_tablemakerforcsv');
