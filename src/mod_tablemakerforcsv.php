@@ -48,10 +48,15 @@ if (!empty($captions)) {
 }
 
 $tags = array();
+$attribs = array();
 if ($params->get('allow_html')) {
     $allowed_tags = $params->get('allowed_tags');
     if (!empty(trim($allowed_tags))) {
         $tags=explode(',',$allowed_tags);
+    }
+    $allowed_attribs = $params->get('allowed_attribs');
+    if (!empty(trim($allowed_attribs))) {
+        $attribs=explode(',',$allowed_attribs);
     }
 }
 

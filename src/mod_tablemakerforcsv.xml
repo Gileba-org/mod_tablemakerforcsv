@@ -52,6 +52,7 @@
           <option value="0">JNO</option>
         </field>
        <field name="allowed_tags" type="text" label="MOD_TABLEMAKERCSV_ALLOWED_TAGS_LABEL" description="MOD_TABLEMAKERCSV_ALLOWED_TAGS_DESC" showon="allow_html:1" />
+       <field name="allowed_attribs" type="text" label="MOD_TABLEMAKERCSV_ALLOWED_ATTRIBS_LABEL" description="MOD_TABLEMAKERCSV_ALLOWED_ATTRIBS_DESC" showon="allow_html:1" />
       </fieldset>
       <fieldset name="STYLING">
         <field name="styling" type="radio" default="1" label="MOD_TABLEMAKERCSV_STYLING_LABEL" description="MOD_TABLEMAKERCSV_STYLING_DESC" class="btn-group btn-group-yesno">
