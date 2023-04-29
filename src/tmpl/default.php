@@ -107,7 +107,7 @@ if (!empty($fileurl)) {
       $j++;
       echo ($j==1) ? '<thead><tr>' : '<tr>';
       $end = count($f);
-      $filter = new InputFilter($tags, array());
+      $filter = new InputFilter($tags, $attribs);
       for ($i=0; $i<$end; $i++) {
         echo ($j==1) ? '<th' . $sort . '>' : '<td>';
         echo $filter->clean($f[$i], 'string');
