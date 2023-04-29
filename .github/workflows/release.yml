@@ -29,3 +29,12 @@ jobs:
           local_source_dir: "update-server"
           dist_target_dir: "www/updates"
           delete: "false"
+      - name: Deploy changelog
+        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+        with:
+            ftp_host: ${{ secrets.FTP_HOST }}
+            ftp_username: ${{ secrets.FTP_USERNAME }}
+            ftp_password: ${{ secrets.FTP_PASSWORD }}
+            local_source_dir: "changelog-server"
+            dist_target_dir: "www/changelogs"
+            delete: "false"

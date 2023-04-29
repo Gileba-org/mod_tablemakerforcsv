@@ -6,12 +6,12 @@
   <license>GNU/GPL</license>
   <authorEmail>info@gileba.be</authorEmail>
   <authorUrl>www.gileba.be</authorUrl>
-  <version>3.4.0</version>
-  <creationDate>2023-04-28</creationDate>
+  <version>3.4.1</version>
+  <creationDate>2023-04-29</creationDate>
   <description>
     This module creates a table from a CSV file. The module reads the content of a CSV file and makes an html table for it. Forked from Mostafa Shahiri (https://github.com/mostafa272/TableMakerforCSV)
   </description>
-  <changelogurl>http://updates.gileba.be/changelogs/mod_tablemakerforcsv.xml</changelogurl>
+  <changelogurl>https://gileba.be/changelogs/mod_tablemakerforcsv.xml</changelogurl>
   <updateservers>
    <server type="extension" priority="1" name="Table Maker for CSV">
       https://gileba.be/updates/mod_tablemakerforcsv.xml
@@ -52,6 +52,7 @@
           <option value="0">JNO</option>
         </field>
        <field name="allowed_tags" type="text" label="MOD_TABLEMAKERCSV_ALLOWED_TAGS_LABEL" description="MOD_TABLEMAKERCSV_ALLOWED_TAGS_DESC" showon="allow_html:1" />
+       <field name="allowed_attribs" type="text" label="MOD_TABLEMAKERCSV_ALLOWED_ATTRIBS_LABEL" description="MOD_TABLEMAKERCSV_ALLOWED_ATTRIBS_DESC" showon="allow_html:1" />
       </fieldset>
       <fieldset name="STYLING">
         <field name="styling" type="radio" default="1" label="MOD_TABLEMAKERCSV_STYLING_LABEL" description="MOD_TABLEMAKERCSV_STYLING_DESC" class="btn-group btn-group-yesno">
