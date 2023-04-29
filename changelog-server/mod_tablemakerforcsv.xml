@@ -3,6 +3,17 @@
 	<changelog>
 		<element>mod_tablemakerforcsv</element>
 		<type>module</type>
+		<version>3.4.1</version>
+		<addition>
+			<item>Extra field to allow attributes of HTML-tags (needed for links, ...)</item>
+		</addition>
+		<fix>
+			<item>Changelog inside Joomla</item>
+		</fix>
+	</changelog>
+	<changelog>
+		<element>mod_tablemakerforcsv</element>
+		<type>module</type>
 		<version>3.4.0</version>
 		<addition>
 			<item>Added an option to allow HTML in cells</item>
