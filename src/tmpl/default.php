@@ -18,24 +18,24 @@ if ($pagination) {
 
 // Custom CSS
 if ($styling) {
-  $style=".csvtable".$moduleclass_sfx."{
+  $style=".csvtable".str_replace(' ','.',$moduleclass_sfx)."{
     text-align:".$textalign.";
     font:".$tablefont.";
     border-radius:".$borderradius.";
     ".$table_style."
 }
-.csvtable".$moduleclass_sfx." th,.csvtable".$moduleclass_sfx." td{
+.csvtable".str_replace(' ','.',$moduleclass_sfx)." th,.csvtable".str_replace(' ','.',$moduleclass_sfx)." td{
 padding:".$padding.";
 }
-.csvtable".$moduleclass_sfx." tr th,.csvtable".$moduleclass_sfx." tr th a{
+.csvtable".str_replace(' ','.',$moduleclass_sfx)." tr th,.csvtable".str_replace(' ','.',$moduleclass_sfx)." tr th a{
 background:".$firstrow_bg.";
 color:".$firstrow_color.";
 font:".$firstrow_font.";
 }
-.csvtable".$moduleclass_sfx." tr:nth-child(even) td{
+.csvtable".str_replace(' ','.',$moduleclass_sfx)." tr:nth-child(even) td{
     background: ".$evenbg.";
 }
-.csvtable".$moduleclass_sfx." tr:nth-child(odd) td{
+.csvtable".str_replace(' ','.',$moduleclass_sfx)." tr:nth-child(odd) td{
     background: ".$oddbg.";
 }
 #csvpagination a{
