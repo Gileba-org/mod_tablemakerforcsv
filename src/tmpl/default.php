@@ -35,7 +35,7 @@ font:".$firstrow_font.";
 .csvtable".$css_style_module_sfx." tr:nth-child(even) td{
     background: ".$evenbg.";
 }
-.csvtable".css_style_module_sfx." tr:nth-child(odd) td{
+.csvtable".$css_style_module_sfx." tr:nth-child(odd) td{
     background: ".$oddbg.";
 }
 #csvpagination a{
