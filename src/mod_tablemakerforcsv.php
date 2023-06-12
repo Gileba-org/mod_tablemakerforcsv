@@ -42,9 +42,9 @@ if (!empty($params->get('moduleclass_sfx'))) {
     $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
     $suffixArray = explode(" ", $moduleclass_sfx);
-    for ($i = 0; $i < count($suffixArray); $i++) {
-        echo $i;
-        if ($i != 0) {
+    $max = count($suffixArray);
+    for ($i = 0; $i < $max; $i++) {
+        if ($i !== 0) {
             $css_style_module_sfx .= ".";
         }
         $css_style_module_sfx .= $suffixArray[$i];
