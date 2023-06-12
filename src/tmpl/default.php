@@ -24,18 +24,18 @@ if ($styling) {
     border-radius:".$borderradius.";
     ".$table_style."
 }
-.csvtable".$moduleclass_sfx." th,.csvtable".$moduleclass_sfx." td{
+.csvtable".$css_style_module_sfx." th,.csvtable".$css_style_module_sfx." td{
 padding:".$padding.";
 }
-.csvtable".$moduleclass_sfx." tr th,.csvtable".$moduleclass_sfx." tr th a{
+.csvtable".$css_style_module_sfx." tr th,.csvtable".$css_style_module_sfx." tr th a{
 background:".$firstrow_bg.";
 color:".$firstrow_color.";
 font:".$firstrow_font.";
 }
-.csvtable".$moduleclass_sfx." tr:nth-child(even) td{
+.csvtable".$css_style_module_sfx." tr:nth-child(even) td{
     background: ".$evenbg.";
 }
-.csvtable".$moduleclass_sfx." tr:nth-child(odd) td{
+.csvtable".css_style_module_sfx." tr:nth-child(odd) td{
     background: ".$oddbg.";
 }
 #csvpagination a{
