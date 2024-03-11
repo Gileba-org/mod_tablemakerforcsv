@@ -17,7 +17,7 @@ jobs:
           files: src/
           dest: mod_tablemakerforcsv.zip
       - name: Create release with zip-file
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: mod_tablemakerforcsv.zip
       - name: Deploy update server
